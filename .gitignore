@@ -1,0 +1,79 @@
+# =============================================================================
+# Publication policy: CODE ONLY (while research is unvalidated).
+#
+# This repository publishes the software layer: the reusable Python package,
+# tests, research notebooks, and the configuration needed to run them.
+#
+# It deliberately EXCLUDES, and keeps local only:
+#   - All documentation, method notes, and planning docs (*.md, except this
+#     repo's root README.md)
+#   - All research data (the entire data/ tree)
+#   - All generated outputs, maps, reports, and media (the entire outputs/ tree)
+#   - All reference materials (pitch deck, brief, proposals, images)
+#
+# These are sensitive until the research and ideas are validated. The README
+# will be expanded once the evidence base is credible.
+# =============================================================================
+
+# --- Virtual environments ---
+.bkqproj/
+.venv/
+venv/
+env/
+
+# --- Package / tooling caches ---
+.uv-cache/
+.uv-python/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+pytest-of-*/
+tmp*_kernels/
+
+# --- Local environment files ---
+.env
+.env.*
+
+# --- Documentation & notes: sensitive, keep local. No READMEs are published;
+#     the GitHub repo keeps its own placeholder README. ---
+*.md
+
+# --- Reference materials & media: keep local ---
+*.pdf
+*.pptx
+*.ppt
+*.docx
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+image/
+
+# --- Research data & generated outputs: keep local ---
+phase1_spinelens_ai/data/
+phase1_spinelens_ai/outputs/
+
+# Defensive: never publish spatial/data artifacts wherever they appear
+*.geojson
+*.gpkg
+*.graphml
+*.parquet
+*.zip
+*.html
+
+# --- Frontend / build outputs ---
+node_modules/
+dist/
+build/
+.vite/
+
+# --- OS and editor files ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
