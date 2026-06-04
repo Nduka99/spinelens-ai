@@ -40,9 +40,9 @@ tmp*_kernels/
 .env
 .env.*
 
-# --- Documentation & notes: sensitive, keep local. No READMEs are published;
-#     the GitHub repo keeps its own placeholder README. ---
+# --- Documentation & notes: sensitive, keep local. Only the root README is published. ---
 *.md
+!/README.md
 
 # --- Reference materials & media: keep local ---
 *.pdf
@@ -107,6 +107,8 @@ Thumbs.db
 !phase1_spinelens_ai/outputs/reports/budget_media/*.png
 !phase1_spinelens_ai/outputs/reports/evidence_pack_media/
 !phase1_spinelens_ai/outputs/reports/evidence_pack_media/*.png
+!phase1_spinelens_ai/outputs/reports/crosscheck_media/
+!phase1_spinelens_ai/outputs/reports/crosscheck_media/*.png
 
 # Re-assert exclusions for everything else inside the re-included output dirs:
 phase1_spinelens_ai/outputs/tables/
