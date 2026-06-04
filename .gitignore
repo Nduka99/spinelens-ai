@@ -31,6 +31,8 @@ __pycache__/
 .ruff_cache/
 .mypy_cache/
 .ipynb_checkpoints/
+cache/
+*/cache/
 pytest-of-*/
 tmp*_kernels/
 
@@ -95,6 +97,16 @@ Thumbs.db
 !phase1_spinelens_ai/outputs/reports/wayfinder_media/*.png
 !phase1_spinelens_ai/outputs/reports/crossing_media/
 !phase1_spinelens_ai/outputs/reports/crossing_media/*.png
+!phase1_spinelens_ai/outputs/reports/corridor_media/
+!phase1_spinelens_ai/outputs/reports/corridor_media/*.png
+!phase1_spinelens_ai/outputs/reports/wayfinder_content_media/
+!phase1_spinelens_ai/outputs/reports/wayfinder_content_media/*.png
+!phase1_spinelens_ai/outputs/reports/pavilion_media/
+!phase1_spinelens_ai/outputs/reports/pavilion_media/*.png
+!phase1_spinelens_ai/outputs/reports/budget_media/
+!phase1_spinelens_ai/outputs/reports/budget_media/*.png
+!phase1_spinelens_ai/outputs/reports/evidence_pack_media/
+!phase1_spinelens_ai/outputs/reports/evidence_pack_media/*.png
 
 # Re-assert exclusions for everything else inside the re-included output dirs:
 phase1_spinelens_ai/outputs/tables/
