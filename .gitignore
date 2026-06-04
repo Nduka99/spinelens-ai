@@ -77,3 +77,29 @@ build/
 Thumbs.db
 .vscode/
 .idea/
+
+# =============================================================================
+# Selective output publication: generated CHARTS (PNG) and MAPS (HTML) only.
+# Everything else under outputs/ stays local: notes (*.md), tables (CSV),
+# executed notebooks, deck-derived media, and AI/concept images.
+# =============================================================================
+!phase1_spinelens_ai/outputs/
+!phase1_spinelens_ai/outputs/maps/
+!phase1_spinelens_ai/outputs/maps/*.html
+!phase1_spinelens_ai/outputs/reports/
+!phase1_spinelens_ai/outputs/reports/gate0b_audit_media/
+!phase1_spinelens_ai/outputs/reports/gate0b_audit_media/*.png
+!phase1_spinelens_ai/outputs/reports/route_legibility_media/
+!phase1_spinelens_ai/outputs/reports/route_legibility_media/*.png
+!phase1_spinelens_ai/outputs/reports/wayfinder_media/
+!phase1_spinelens_ai/outputs/reports/wayfinder_media/*.png
+!phase1_spinelens_ai/outputs/reports/crossing_media/
+!phase1_spinelens_ai/outputs/reports/crossing_media/*.png
+
+# Re-assert exclusions for everything else inside the re-included output dirs:
+phase1_spinelens_ai/outputs/tables/
+phase1_spinelens_ai/outputs/exports/
+phase1_spinelens_ai/outputs/reports/*.ipynb
+phase1_spinelens_ai/outputs/reports/concept_visuals/
+phase1_spinelens_ai/outputs/reports/correct_deck_extract/
+phase1_spinelens_ai/outputs/reports/pptx_slide7_media/

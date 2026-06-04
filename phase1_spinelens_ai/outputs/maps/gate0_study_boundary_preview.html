@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8d334d6539c01d2a8e6625f2185bcc52 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8d334d6539c01d2a8e6625f2185bcc52" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8d334d6539c01d2a8e6625f2185bcc52 = L.map(
+                "map_8d334d6539c01d2a8e6625f2185bcc52",
+                {
+                    center: [52.483471333333334, -1.8918346666666668],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_813851f6a26ab833e7d32ea638f1a202 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_813851f6a26ab833e7d32ea638f1a202.addTo(map_8d334d6539c01d2a8e6625f2185bcc52);
+        
+    
+        function geo_json_161f0d4d03c8f8ddc114b9cb2d674671_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#1d4f91", "fillColor": "#2f80ed", "fillOpacity": 0.18, "weight": 2};
+            }
+        }
+
+        function geo_json_161f0d4d03c8f8ddc114b9cb2d674671_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_161f0d4d03c8f8ddc114b9cb2d674671 = L.geoJson(null, {
+                onEachFeature: geo_json_161f0d4d03c8f8ddc114b9cb2d674671_onEachFeature,
+            
+                style: geo_json_161f0d4d03c8f8ddc114b9cb2d674671_styler,
+            ...{
+}
+        });
+
+        function geo_json_161f0d4d03c8f8ddc114b9cb2d674671_add (data) {
+            geo_json_161f0d4d03c8f8ddc114b9cb2d674671
+                .addData(data);
+        }
+            geo_json_161f0d4d03c8f8ddc114b9cb2d674671_add({"features": [{"geometry": {"coordinates": [[[-1.8964089314295611, 52.473548742879494], [-1.8971060199596554, 52.47342564914179], [-1.8978195658712353, 52.47334506193916], [-1.8985426368143237, 52.473307764199554], [-1.8992682079843182, 52.47331411828044], [-1.899989230308176, 52.473364062451516], [-1.9006986988653052, 52.47345711149401], [-1.9013897208814707, 52.47359236141019], [-1.902055582638077, 52.473768498198375], [-1.902689814649521, 52.47398381060783], [-1.9032862544778464, 52.47423620675057], [-1.903839106576438, 52.47452323440934], [-1.904342998582922, 52.47484210484489], [-1.9047930335153005, 52.4751897198726], [-1.9051848373646167, 52.47556270194597], [-1.905514601621512, 52.475957426955574], [-1.9057791203226504, 52.47637005942589], [-1.9059758212556634, 52.47679658976862], [-1.907176314747772, 52.479996517758856], [-1.9072978906149007, 52.48040739718761], [-1.907356500993821, 52.48082339153655], [-1.9073516384097735, 52.48124091160121], [-1.9072833430215332, 52.4816563549122], [-1.9071522023367768, 52.48206613681836], [-1.9061525834582371, 52.484566196989576], [-1.9059467997606574, 52.48498941379235], [-1.9056740003540042, 52.485398265118356], [-1.905336815142677, 52.48578880673811], [-1.9049384954155728, 52.48615727095649], [-1.9044828825303424, 52.486500102976294], [-1.9039743708917927, 52.486813995210596], [-1.9034178655802851, 52.48709591921198], [-1.8892173571588446, 52.49359644512962], [-1.8886224125733986, 52.49384199588012], [-1.887991104209889, 52.49405100355479], [-1.887329437450436, 52.49422147979637], [-1.8866437067261546, 52.49435180278905], [-1.8859404355969493, 52.494440732700426], [-1.8852263146421961, 52.494487423486824], [-1.8845081377554755, 52.494491430949246], [-1.8837927374520074, 52.49445271696326], [-1.8830869198069948, 52.49437164984178], [-1.882397399646672, 52.49424900082799], [-1.8817307366113858, 52.49408593675144], [-1.881093272701608, 52.49388400891763], [-1.8804910719033814, 52.49364513833735], [-1.8799298624695833, 52.4933715974367], [-1.8794149824076891, 52.4930659884227], [-1.8789513286936852, 52.492731218510684], [-1.8785433106958238, 52.49237047225074], [-1.8781948082512605, 52.49198718121628], [-1.8779091347938128, 52.491584991344794], [-1.8776890058824247, 52.49116772824176], [-1.8775365134281004, 52.49073936077874], [-1.8774531058623445, 52.490303963332295], [-1.877053703003156, 52.48670393905323], [-1.8770416025175132, 52.4862391934128], [-1.877108182051512, 52.48577616957576], [-1.87725272725221, 52.485319818377455], [-1.8787532898456167, 52.48161990864884], [-1.8789683420807788, 52.48118509154127], [-1.8792541640210596, 52.48076574417557], [-1.8796078355958885, 52.480366147885654], [-1.8800257443049766, 52.479990382244374], [-1.880503622155963, 52.47964228343198], [-1.8810365892782157, 52.47932540509261], [-1.887736472804221, 52.475725678364036], [-1.8882989893022624, 52.475451985635644], [-1.8889025560428438, 52.47521311727543], [-1.8895414118035492, 52.47501135311323], [-1.890209458821867, 52.474848618817276], [-1.8964089314295611, 52.473548742879494]]], "type": "Polygon"}, "id": "0", "properties": {"boundary_id": "phase1_provisional_corridor_boundary_v0", "buffer_meters": 500, "funding_use": "not_approved", "method": "anchor_convex_hull_buffer", "output_crs": "EPSG:4326", "status": "provisional_not_field_validated", "working_crs": "EPSG:27700"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_161f0d4d03c8f8ddc114b9cb2d674671.addTo(map_8d334d6539c01d2a8e6625f2185bcc52);
+        
+    
+            var marker_a657d9faa719d38ac832261b276a9ce8 = L.marker(
+                [52.481, -1.9],
+                {
+}
+            ).addTo(map_8d334d6539c01d2a8e6625f2185bcc52);
+        
+    
+            marker_a657d9faa719d38ac832261b276a9ce8.bindTooltip(
+                `<div>
+                     Colmore Row (deck_route_1_city_core_origin)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0be994902eae08e5f4ea501105f649d2 = L.marker(
+                [52.4778, -1.8988],
+                {
+}
+            ).addTo(map_8d334d6539c01d2a8e6625f2185bcc52);
+        
+    
+            marker_0be994902eae08e5f4ea501105f649d2.bindTooltip(
+                `<div>
+                     Birmingham New Street Station (experimental_phase1_tactical_corridor_origin)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2f72c065378d7306f256e782eb8ab7b2 = L.marker(
+                [52.4791, -1.8926],
+                {
+}
+            ).addTo(map_8d334d6539c01d2a8e6625f2185bcc52);
+        
+    
+            marker_2f72c065378d7306f256e782eb8ab7b2.bindTooltip(
+                `<div>
+                     Moor Street Queensway / Moor Street Station Approach (deck_route_2_moor_street_origin)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a455f6b19fa1e89e02070bc35b7b3aba = L.marker(
+                [52.4835, -1.899],
+                {
+}
+            ).addTo(map_8d334d6539c01d2a8e6625f2185bcc52);
+        
+    
+            marker_a455f6b19fa1e89e02070bc35b7b3aba.bindTooltip(
+                `<div>
+                     Birmingham Snow Hill Station (experimental_phase1_tactical_corridor_origin)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1366ee1e2e6b20a315017a89f397a33a = L.marker(
+                [52.49, -1.8848],
+                {
+}
+            ).addTo(map_8d334d6539c01d2a8e6625f2185bcc52);
+        
+    
+            marker_1366ee1e2e6b20a315017a89f397a33a.bindTooltip(
+                `<div>
+                     Dartmouth Middleway / Nechells Approach (deck_route_3_nechells_origin)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a7010c677ea74850133cbb4a4a6752fc = L.marker(
+                [52.484042, -1.892412],
+                {
+}
+            ).addTo(map_8d334d6539c01d2a8e6625f2185bcc52);
+        
+    
+            marker_a7010c677ea74850133cbb4a4a6752fc.bindTooltip(
+                `<div>
+                     Ryder Street Gateway Pavilion Search Area (primary_phase1_pavilion_site_search_area)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4e6bd88d258658028f3ce3b5c6dd5492 = L.marker(
+                [52.4864, -1.8844],
+                {
+}
+            ).addTo(map_8d334d6539c01d2a8e6625f2185bcc52);
+        
+    
+            marker_4e6bd88d258658028f3ce3b5c6dd5492.bindTooltip(
+                `<div>
+                     Dartmouth Middleway / Jennens Road Crossing (priority_pedestrian_crossing_barrier)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_40154a77b1a236f2be2841ab6b182ce3 = L.marker(
+                [52.4827, -1.8859],
+                {
+}
+            ).addTo(map_8d334d6539c01d2a8e6625f2185bcc52);
+        
+    
+            marker_40154a77b1a236f2be2841ab6b182ce3.bindTooltip(
+                `<div>
+                     Millennium Point (bkq_onward_anchor)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_230cb2a8b0427a28d1f0259abbdb679f = L.marker(
+                [52.4867, -1.8886],
+                {
+}
+            ).addTo(map_8d334d6539c01d2a8e6625f2185bcc52);
+        
+    
+            marker_230cb2a8b0427a28d1f0259abbdb679f.bindTooltip(
+                `<div>
+                     Aston University (bkq_onward_anchor)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
