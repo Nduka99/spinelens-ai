@@ -1,0 +1,185 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.9,
+          52.481
+        ]
+      },
+      "properties": {
+        "name": "Colmore Row",
+        "role": "City core origin",
+        "status": "To be confirmed on site"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.8988,
+          52.4778
+        ]
+      },
+      "properties": {
+        "name": "Birmingham New Street Station",
+        "role": "Additional tested origin",
+        "status": "To be confirmed on site"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.8926,
+          52.4791
+        ]
+      },
+      "properties": {
+        "name": "Moor Street Queensway / Moor Street Station Approach",
+        "role": "Station origin",
+        "status": "To be confirmed on site"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.898833,
+          52.483741
+        ]
+      },
+      "properties": {
+        "name": "Birmingham Snow Hill Station",
+        "role": "Additional tested origin",
+        "status": "To be confirmed on site"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.8848,
+          52.49
+        ]
+      },
+      "properties": {
+        "name": "Dartmouth Middleway / Nechells Approach",
+        "role": "Neighbourhood origin",
+        "status": "To be confirmed on site"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.892412,
+          52.484042
+        ]
+      },
+      "properties": {
+        "name": "Ryder Street Gateway Pavilion Search Area",
+        "role": "Primary Phase1 Pavilion Site Search Area",
+        "status": "To be confirmed on site"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.8844,
+          52.4864
+        ]
+      },
+      "properties": {
+        "name": "Dartmouth Middleway / Jennens Road Crossing",
+        "role": "Priority Pedestrian Crossing Barrier",
+        "status": "To be confirmed on site"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.8859,
+          52.4827
+        ]
+      },
+      "properties": {
+        "name": "Millennium Point",
+        "role": "Bkq Onward Anchor",
+        "status": "To be confirmed on site"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.8886,
+          52.4867
+        ]
+      },
+      "properties": {
+        "name": "Aston University",
+        "role": "Bkq Onward Anchor",
+        "status": "To be confirmed on site"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.8861,
+          52.4816
+        ]
+      },
+      "properties": {
+        "name": "Birmingham City University (Parkside)",
+        "role": "Bkq Onward Anchor",
+        "status": "To be confirmed on site"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.8826,
+          52.4849
+        ]
+      },
+      "properties": {
+        "name": "STEAMhouse",
+        "role": "Bkq Onward Anchor",
+        "status": "To be confirmed on site"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.8826,
+          52.4862
+        ]
+      },
+      "properties": {
+        "name": "Innovation Birmingham (Faraday Wharf)",
+        "role": "Bkq Onward Anchor",
+        "status": "To be confirmed on site"
+      }
+    }
+  ]
+}

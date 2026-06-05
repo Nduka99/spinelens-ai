@@ -1,0 +1,2271 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.9000815,
+            52.4811692
+          ],
+          [
+            -1.8998953,
+            52.4809751
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 25.0,
+        "intensity": 0.123,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.9000815,
+            52.4811692
+          ],
+          [
+            -1.9000121,
+            52.4811963
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 5.6,
+        "intensity": 0.125,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.899936,
+            52.4811338
+          ],
+          [
+            -1.9000121,
+            52.4811963
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 8.7,
+        "intensity": 0.126,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.899936,
+            52.4811338
+          ],
+          [
+            -1.8999174,
+            52.481133
+          ],
+          [
+            -1.8998562,
+            52.4811252
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 5.5,
+        "intensity": 0.127,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8995352,
+            52.4810845
+          ],
+          [
+            -1.8998562,
+            52.4811252
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 22.2,
+        "intensity": 0.132,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8993231,
+            52.4810576
+          ],
+          [
+            -1.8995352,
+            52.4810845
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 14.7,
+        "intensity": 0.138,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8992447,
+            52.4810112
+          ],
+          [
+            -1.8993231,
+            52.4810576
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 7.4,
+        "intensity": 0.141,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8992447,
+            52.4810112
+          ],
+          [
+            -1.8986667,
+            52.4810752
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 39.8,
+        "intensity": 0.15,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8984645,
+            52.481094
+          ],
+          [
+            -1.8986667,
+            52.4810752
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 13.9,
+        "intensity": 0.161,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8982581,
+            52.4811111
+          ],
+          [
+            -1.8984645,
+            52.481094
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 14.1,
+        "intensity": 0.167,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8982581,
+            52.4811111
+          ],
+          [
+            -1.8973129,
+            52.4812349
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 65.5,
+        "intensity": 0.183,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8973129,
+            52.4812349
+          ],
+          [
+            -1.8972648,
+            52.4812055
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 4.6,
+        "intensity": 0.197,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8966766,
+            52.4814517
+          ],
+          [
+            -1.8972648,
+            52.4812055
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 48.3,
+        "intensity": 0.208,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8966766,
+            52.4814517
+          ],
+          [
+            -1.89631,
+            52.4815821
+          ],
+          [
+            -1.8961314,
+            52.4816575
+          ],
+          [
+            -1.8960943,
+            52.4816731
+          ],
+          [
+            -1.8960766,
+            52.4816806
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 48.0,
+        "intensity": 0.231,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8960766,
+            52.4816806
+          ],
+          [
+            -1.8960565,
+            52.4816889
+          ],
+          [
+            -1.8958351,
+            52.4817804
+          ],
+          [
+            -1.8952251,
+            52.4820609
+          ],
+          [
+            -1.8950614,
+            52.4820734
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 82.7,
+        "intensity": 0.262,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8949874,
+            52.4820978
+          ],
+          [
+            -1.8950614,
+            52.4820734
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 5.7,
+        "intensity": 0.281,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8949874,
+            52.4820978
+          ],
+          [
+            -1.894924,
+            52.4821448
+          ],
+          [
+            -1.8948789,
+            52.4821783
+          ],
+          [
+            -1.8945873,
+            52.4822805
+          ],
+          [
+            -1.8945741,
+            52.4822918
+          ],
+          [
+            -1.8945401,
+            52.4823209
+          ],
+          [
+            -1.8944999,
+            52.4823494
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 2,
+        "lengthM": 44.1,
+        "intensity": 0.493,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8941896,
+            52.4823917
+          ],
+          [
+            -1.8942551,
+            52.4824161
+          ],
+          [
+            -1.8943125,
+            52.4823661
+          ],
+          [
+            -1.8943585,
+            52.4823435
+          ],
+          [
+            -1.8944177,
+            52.4823376
+          ],
+          [
+            -1.8944999,
+            52.4823494
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 2,
+        "lengthM": 25.8,
+        "intensity": 0.506,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.89354,
+            52.4829127
+          ],
+          [
+            -1.8936655,
+            52.4828594
+          ],
+          [
+            -1.8937101,
+            52.4828317
+          ],
+          [
+            -1.8941896,
+            52.4823917
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 2,
+        "lengthM": 73.4,
+        "intensity": 0.528,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.89354,
+            52.4829127
+          ],
+          [
+            -1.8935338,
+            52.4830521
+          ],
+          [
+            -1.8934364,
+            52.4831592
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 3,
+        "lengthM": 29.1,
+        "intensity": 0.751,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8929842,
+            52.483666
+          ],
+          [
+            -1.8932045,
+            52.4834143
+          ],
+          [
+            -1.8934364,
+            52.4831592
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 3,
+        "lengthM": 64.1,
+        "intensity": 0.773,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8929842,
+            52.483666
+          ],
+          [
+            -1.8928296,
+            52.4838595
+          ],
+          [
+            -1.8926928,
+            52.4840347
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 4,
+        "lengthM": 45.5,
+        "intensity": 1.0,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.892729,
+            52.4791294
+          ],
+          [
+            -1.8926743,
+            52.4791186
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 3.9,
+        "intensity": 0.146,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.892729,
+            52.4791294
+          ],
+          [
+            -1.8927913,
+            52.4791553
+          ],
+          [
+            -1.8928991,
+            52.4792352
+          ],
+          [
+            -1.8929742,
+            52.4792606
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 22.4,
+        "intensity": 0.15,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8929742,
+            52.4792606
+          ],
+          [
+            -1.893033,
+            52.4792729
+          ],
+          [
+            -1.8930964,
+            52.4792861
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 8.7,
+        "intensity": 0.154,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8930964,
+            52.4792861
+          ],
+          [
+            -1.8930429,
+            52.4793548
+          ],
+          [
+            -1.8930093,
+            52.4793993
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 13.9,
+        "intensity": 0.158,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8930894,
+            52.4794255
+          ],
+          [
+            -1.8930093,
+            52.4793993
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 6.2,
+        "intensity": 0.161,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8930894,
+            52.4794255
+          ],
+          [
+            -1.8933984,
+            52.4795133
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 23.1,
+        "intensity": 0.164,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8933512,
+            52.4795642
+          ],
+          [
+            -1.8933984,
+            52.4795133
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 6.5,
+        "intensity": 0.167,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8933512,
+            52.4795642
+          ],
+          [
+            -1.8933062,
+            52.4796152
+          ],
+          [
+            -1.8932118,
+            52.4797473
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 22.5,
+        "intensity": 0.174,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8933254,
+            52.4797238
+          ],
+          [
+            -1.8932567,
+            52.4797585
+          ],
+          [
+            -1.8932118,
+            52.4797473
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 9.3,
+        "intensity": 0.179,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8933254,
+            52.4797238
+          ],
+          [
+            -1.893465,
+            52.4797618
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 10.4,
+        "intensity": 0.178,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8934625,
+            52.4800912
+          ],
+          [
+            -1.8934426,
+            52.4800651
+          ],
+          [
+            -1.893465,
+            52.4797618
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 37.0,
+        "intensity": 0.188,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8934625,
+            52.4800912
+          ],
+          [
+            -1.8935075,
+            52.4800982
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 3.1,
+        "intensity": 0.197,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8935075,
+            52.4800982
+          ],
+          [
+            -1.8935657,
+            52.4802079
+          ],
+          [
+            -1.8935535,
+            52.4802983
+          ],
+          [
+            -1.8935474,
+            52.4803294
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 26.4,
+        "intensity": 0.202,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8935474,
+            52.4803294
+          ],
+          [
+            -1.8937591,
+            52.4803151
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 14.4,
+        "intensity": 0.208,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8939978,
+            52.4804793
+          ],
+          [
+            -1.8937947,
+            52.4803396
+          ],
+          [
+            -1.8937591,
+            52.4803151
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 24.4,
+        "intensity": 0.211,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.894042,
+            52.4805967
+          ],
+          [
+            -1.8939978,
+            52.4804793
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 13.4,
+        "intensity": 0.217,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8936449,
+            52.4809809
+          ],
+          [
+            -1.8940096,
+            52.4806272
+          ],
+          [
+            -1.894042,
+            52.4805967
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 50.5,
+        "intensity": 0.232,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8927853,
+            52.4818799
+          ],
+          [
+            -1.8928705,
+            52.4817695
+          ],
+          [
+            -1.8929033,
+            52.4817271
+          ],
+          [
+            -1.8930365,
+            52.4815551
+          ],
+          [
+            -1.8935276,
+            52.4810903
+          ],
+          [
+            -1.8936449,
+            52.4809809
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 115.9,
+        "intensity": 0.268,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8922315,
+            52.482362
+          ],
+          [
+            -1.8922381,
+            52.4823335
+          ],
+          [
+            -1.8922483,
+            52.4823073
+          ],
+          [
+            -1.8923055,
+            52.4822693
+          ],
+          [
+            -1.8924471,
+            52.4821593
+          ],
+          [
+            -1.8926579,
+            52.4819922
+          ],
+          [
+            -1.8927853,
+            52.4818799
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 66.1,
+        "intensity": 0.307,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8922315,
+            52.482362
+          ],
+          [
+            -1.8923355,
+            52.4823931
+          ],
+          [
+            -1.8929735,
+            52.4827076
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 63.4,
+        "intensity": 0.33,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8929735,
+            52.4827076
+          ],
+          [
+            -1.8932883,
+            52.4828558
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 26.9,
+        "intensity": 0.342,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.89354,
+            52.4829127
+          ],
+          [
+            -1.8934164,
+            52.4828907
+          ],
+          [
+            -1.8932883,
+            52.4828558
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 18.2,
+        "intensity": 0.345,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8987422,
+            52.4777322
+          ],
+          [
+            -1.8986694,
+            52.4777243
+          ],
+          [
+            -1.8986104,
+            52.4777233
+          ],
+          [
+            -1.8986435,
+            52.477604
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 22.5,
+        "intensity": 0.019,
+        "suitability": 10
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8986648,
+            52.4775274
+          ],
+          [
+            -1.8986435,
+            52.477604
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 8.6,
+        "intensity": 0.011,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8986997,
+            52.4774079
+          ],
+          [
+            -1.8986648,
+            52.4775274
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 13.5,
+        "intensity": 0.006,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8986997,
+            52.4774079
+          ],
+          [
+            -1.8989262,
+            52.4774229
+          ],
+          [
+            -1.8990867,
+            52.4774396
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 26.5,
+        "intensity": 0.0,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8990867,
+            52.4774396
+          ],
+          [
+            -1.8990542,
+            52.4775406
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 11.4,
+        "intensity": 0.0,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8989816,
+            52.4777598
+          ],
+          [
+            -1.8990542,
+            52.4775406
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 24.9,
+        "intensity": 0.009,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8989534,
+            52.4778501
+          ],
+          [
+            -1.8989816,
+            52.4777598
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 10.2,
+        "intensity": 0.017,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8989534,
+            52.4778501
+          ],
+          [
+            -1.898916,
+            52.4779823
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 14.9,
+        "intensity": 0.022,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8989007,
+            52.4780362
+          ],
+          [
+            -1.898916,
+            52.4779823
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 6.1,
+        "intensity": 0.027,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8987606,
+            52.4784734
+          ],
+          [
+            -1.8987737,
+            52.4784268
+          ],
+          [
+            -1.8989007,
+            52.4780362
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 49.5,
+        "intensity": 0.04,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8982278,
+            52.4784206
+          ],
+          [
+            -1.8987606,
+            52.4784734
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 36.6,
+        "intensity": 0.054,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8982278,
+            52.4784206
+          ],
+          [
+            -1.8982881,
+            52.4785657
+          ],
+          [
+            -1.8982973,
+            52.4785864
+          ],
+          [
+            -1.8983149,
+            52.4786072
+          ],
+          [
+            -1.8983108,
+            52.4786391
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 25.2,
+        "intensity": 0.062,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8981178,
+            52.4789924
+          ],
+          [
+            -1.8983066,
+            52.4786711
+          ],
+          [
+            -1.8983108,
+            52.4786391
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 41.5,
+        "intensity": 0.076,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.898071,
+            52.479072
+          ],
+          [
+            -1.8981178,
+            52.4789924
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 9.4,
+        "intensity": 0.088,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8979309,
+            52.4790582
+          ],
+          [
+            -1.8979656,
+            52.4790611
+          ],
+          [
+            -1.898071,
+            52.479072
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 9.6,
+        "intensity": 0.091,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8979309,
+            52.4790582
+          ],
+          [
+            -1.8977863,
+            52.4791872
+          ],
+          [
+            -1.8976208,
+            52.4793974
+          ],
+          [
+            -1.897314,
+            52.4796609
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 79.2,
+        "intensity": 0.112,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8971207,
+            52.4798269
+          ],
+          [
+            -1.897314,
+            52.4796609
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 22.6,
+        "intensity": 0.136,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8971207,
+            52.4798269
+          ],
+          [
+            -1.896759,
+            52.4801446
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 43.0,
+        "intensity": 0.152,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8966929,
+            52.4801968
+          ],
+          [
+            -1.896759,
+            52.4801446
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 7.3,
+        "intensity": 0.164,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8966929,
+            52.4801968
+          ],
+          [
+            -1.8966596,
+            52.4801844
+          ],
+          [
+            -1.8966443,
+            52.4801787
+          ],
+          [
+            -1.8961075,
+            52.4806461
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 67.3,
+        "intensity": 0.18,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8961075,
+            52.4806461
+          ],
+          [
+            -1.8956482,
+            52.4810481
+          ],
+          [
+            -1.8955918,
+            52.481086
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 60.1,
+        "intensity": 0.211,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8954763,
+            52.4811632
+          ],
+          [
+            -1.8954936,
+            52.4811516
+          ],
+          [
+            -1.8955918,
+            52.481086
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 11.6,
+        "intensity": 0.229,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.895379,
+            52.4813284
+          ],
+          [
+            -1.8954765,
+            52.4812332
+          ],
+          [
+            -1.8954811,
+            52.4811854
+          ],
+          [
+            -1.8954796,
+            52.4811785
+          ],
+          [
+            -1.8954763,
+            52.4811632
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 20.3,
+        "intensity": 0.236,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.895379,
+            52.4813284
+          ],
+          [
+            -1.8952185,
+            52.4814591
+          ],
+          [
+            -1.8951252,
+            52.4815493
+          ],
+          [
+            -1.8948135,
+            52.4818123
+          ],
+          [
+            -1.8947132,
+            52.4818992
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 77.9,
+        "intensity": 0.259,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8947132,
+            52.4818992
+          ],
+          [
+            -1.8946651,
+            52.4819582
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 7.3,
+        "intensity": 0.28,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8949874,
+            52.4820978
+          ],
+          [
+            -1.8947904,
+            52.4820123
+          ],
+          [
+            -1.8946651,
+            52.4819582
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 26.8,
+        "intensity": 0.282,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8988334,
+            52.4837407
+          ],
+          [
+            -1.8987331,
+            52.4837836
+          ],
+          [
+            -1.8985588,
+            52.4838608
+          ],
+          [
+            -1.8984117,
+            52.4839227
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 35.0,
+        "intensity": 0.216,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8984117,
+            52.4839227
+          ],
+          [
+            -1.8983328,
+            52.4839563
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 6.5,
+        "intensity": 0.224,
+        "suitability": 10
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.898143,
+            52.4840393
+          ],
+          [
+            -1.8983328,
+            52.4839563
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 15.8,
+        "intensity": 0.229,
+        "suitability": 90
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.898143,
+            52.4840393
+          ],
+          [
+            -1.8977529,
+            52.4836967
+          ],
+          [
+            -1.897702,
+            52.4836545
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 52.2,
+        "intensity": 0.239,
+        "suitability": 90
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8975109,
+            52.4834968
+          ],
+          [
+            -1.897702,
+            52.4836545
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 21.8,
+        "intensity": 0.248,
+        "suitability": 90
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8975109,
+            52.4834968
+          ],
+          [
+            -1.897261,
+            52.4836078
+          ],
+          [
+            -1.8972196,
+            52.4836276
+          ],
+          [
+            -1.8968639,
+            52.4837763
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 53.7,
+        "intensity": 0.262,
+        "suitability": 90
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8967292,
+            52.4837858
+          ],
+          [
+            -1.8968639,
+            52.4837763
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 9.2,
+        "intensity": 0.276,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8959448,
+            52.4832745
+          ],
+          [
+            -1.8965899,
+            52.4837428
+          ],
+          [
+            -1.8967292,
+            52.4837858
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 78.5,
+        "intensity": 0.289,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8957387,
+            52.4833267
+          ],
+          [
+            -1.8959448,
+            52.4832745
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 15.1,
+        "intensity": 0.3,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8957387,
+            52.4833267
+          ],
+          [
+            -1.8953166,
+            52.483462
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 32.3,
+        "intensity": 0.312,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8953166,
+            52.483462
+          ],
+          [
+            -1.8951966,
+            52.4835039
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 9.4,
+        "intensity": 0.322,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8948447,
+            52.4836312
+          ],
+          [
+            -1.8951966,
+            52.4835039
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 27.7,
+        "intensity": 0.331,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8948447,
+            52.4836312
+          ],
+          [
+            -1.8945746,
+            52.4837562
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 23.0,
+        "intensity": 0.342,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8945746,
+            52.4837562
+          ],
+          [
+            -1.8941791,
+            52.4840164
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 39.4,
+        "intensity": 0.355,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8939473,
+            52.4841547
+          ],
+          [
+            -1.8941791,
+            52.4840164
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 22.0,
+        "intensity": 0.366,
+        "suitability": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.8929842,
+            52.483666
+          ],
+          [
+            -1.8930801,
+            52.4837147
+          ],
+          [
+            -1.8939473,
+            52.4841547
+          ]
+        ]
+      },
+      "properties": {
+        "role": "Tactical corridor surface",
+        "sharedRoutes": 1,
+        "lengthM": 84.9,
+        "intensity": 0.385,
+        "suitability": 100
+      }
+    }
+  ]
+}
