@@ -1,9 +1,9 @@
 /**
- * MapStage — the real Birmingham map the journey plays out on.
+ * MapStage - the real Birmingham map the journey plays out on.
  *
  * Step 1: MapLibre GL + free keyless dark basemap + our five sanitised GeoJSON
  *         layers, on-brand, interactive.
- * Step 2: cinematic camera — flies to the active chapter's focus (pitch/zoom/
+ * Step 2: cinematic camera - flies to the active chapter's focus (pitch/zoom/
  *         bearing) and emphasises that chapter's layers. Honours reduced-motion.
  */
 import { type ComponentProps, useEffect, useRef } from "react";
@@ -12,6 +12,7 @@ import type { ExpressionSpecification } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 
 import { BASEMAP_STYLE_URL, motion, palette } from "../theme/tokens";
+import { Buildings3D, CrossingImprovement } from "./Buildings3D";
 import type { Focus, LayerReference } from "../types/content";
 
 type LayerConfig = ComponentProps<typeof Layer>;
@@ -22,7 +23,7 @@ const DEFAULT_FOCUS: Focus = [-1.8924, 52.4845, 14.0, 35, 18];
  * The corridor is THE motif. Instead of a static line we paint it with a
  * line-gradient (requires `lineMetrics` on the source) and animate two things:
  *   1. a draw-in reveal (0 -> 1) when the spine becomes the active layer, and
- *   2. a glow band that travels along it — a sense of walking the route.
+ *   2. a glow band that travels along it - a sense of walking the route.
  * Reduced-motion users get a clean static line, no animation loop.
  */
 const SPINE_LAYER_ID = "corridor-line";
@@ -194,11 +195,16 @@ export function MapStage({ layers, focus, activeLayerIds }: MapStageProps) {
     const map = mapRef.current;
     if (!map) return;
     const [longitude, latitude, zoom, pitch, bearing] = focus;
-    const target = { center: [longitude, latitude] as [number, number], zoom, pitch, bearing };
+    // The scene card sits on the right; pad the camera so the focus frames into the
+    // visible left area instead of hiding behind the card. (Mobile card centres in
+    // Step 9, so only pad on wider viewports.)
+    const wide = typeof window !== "undefined" && window.innerWidth >= 760;
+    const padding = { top: 0, bottom: 0, left: 0, right: wide ? Math.min(460, Math.round(window.innerWidth * 0.34)) : 0 };
+    const target = { center: [longitude, latitude] as [number, number], zoom, pitch, bearing, padding };
     if (prefersReducedMotion()) {
       map.jumpTo(target);
     } else {
-      map.flyTo({ ...target, duration: motion.slow * 2.4, curve: 1.5, essential: true });
+      map.flyTo({ ...target, duration: motion.slow * 1.9, curve: 1.42, essential: true });
     }
   }, [focus, focusKey]);
 
@@ -248,10 +254,19 @@ export function MapStage({ layers, focus, activeLayerIds }: MapStageProps) {
         mapStyle={BASEMAP_STYLE_URL}
         style={{ position: "absolute", inset: 0 }}
         attributionControl={{ compact: true }}
-        onLoad={(event) => event.target.resize()}
+        onLoad={(event) => {
+          event.target.resize();
+          // DEV-only handle for camera/projection verification (stripped from prod builds).
+          if (import.meta.env.DEV) {
+            (window as unknown as { __spineMap?: unknown }).__spineMap = event.target;
+          }
+        }}
       >
         <NavigationControl position="top-right" showCompass visualizePitch />
-        {layers.map((layer) => {
+        {/* 3D massing under the spine; labels off to keep the journey clean. */}
+        <Buildings3D labels={false} />
+        {/* The 3D buildings are the anchors now - drop the flat blue anchor dots. */}
+        {layers.filter((layer) => layer.id !== "anchors").map((layer) => {
           const active = allActive || activeLayerIds!.includes(layer.id);
           return (
             <Source
@@ -265,6 +280,7 @@ export function MapStage({ layers, focus, activeLayerIds }: MapStageProps) {
             </Source>
           );
         })}
+        <CrossingImprovement after labels={false} />
       </Map>
     </div>
   );

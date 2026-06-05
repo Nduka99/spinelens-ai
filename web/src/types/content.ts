@@ -49,6 +49,13 @@ export type SpineContent = {
       walkTimeMin: number;
       directness: number;
     }>;
+    /** Route legibility (0-100) before vs after wayfinding. */
+    legibilityBeforeAfter?: Array<{
+      route: string;
+      before: number;
+      after: number;
+      delta: number;
+    }>;
     budget: {
       envelope: number;
       centralNet: number;

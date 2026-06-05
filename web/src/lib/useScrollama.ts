@@ -2,7 +2,7 @@ import { useEffect, type RefObject } from "react";
 import scrollama from "scrollama";
 
 /**
- * useScrollama — fire `onEnter(sceneId)` as each `[data-scene-id]` step scrolls past
+ * useScrollama - fire `onEnter(sceneId)` as each `[data-scene-id]` step scrolls past
  * the trigger line. Drives the cinematic map (scroll → active chapter → camera flyTo).
  * Cleans up on unmount; re-binds on resize.
  */

@@ -1,8 +1,8 @@
 /**
- * Explore — free interactive map view.
- * Step 0: placeholder listing the available layers. Step 7 adds layer/focus
- * dropdowns and clickable plain-language popups on the real map.
+ * Explore - free interactive map view (Step 7): pan/zoom, toggle layers, click
+ * features for plain-language popups. Full-bleed map with overlay controls.
  */
+import { ExploreMap } from "./ExploreMap";
 import type { LayerReference } from "../types/content";
 
 type ExploreProps = {
@@ -12,15 +12,10 @@ type ExploreProps = {
 
 export function Explore({ layers, tagline }: ExploreProps) {
   return (
-    <section className="view-panel" aria-label="Explore the evidence">
-      <h2 className="view-panel__title">Explore</h2>
-      <p className="view-panel__lead">{tagline}</p>
-      <ul className="view-panel__chips">
-        {layers.map((layer) => (
-          <li key={layer.id}>{layer.id.replace(/_/g, " ")}</li>
-        ))}
-      </ul>
-      <p className="view-panel__note">Interactive layers and map popups arrive in a later step.</p>
+    <section className="explore" aria-label="Explore the evidence">
+      <h2 className="sr-only">Explore the evidence</h2>
+      <ExploreMap layers={layers} />
+      <p className="explore__caption">{tagline}</p>
     </section>
   );
 }

@@ -1,10 +1,10 @@
 /**
- * DiegeticWayfinder — an in-world directional sign pinned to the map.
+ * DiegeticWayfinder - an in-world directional sign pinned to the map.
  *
  * Reinforces the "walk the spine" idea: as the journey progresses the sign
  * fills its track and the on-foot time to B-KQ counts down. The headline time
  * is the median walk time across the studied approaches (a real, grounded
- * figure), used here as a journey metaphor — the precise numbers live in the
+ * figure), used here as a journey metaphor - the precise numbers live in the
  * scene cards and the Evidence view.
  */
 import type { Chapter } from "../types/content";
@@ -31,7 +31,7 @@ export function DiegeticWayfinder({ chapters, activeId, walkMinutes }: DiegeticW
   return (
     <aside
       className="wayfinder"
-      aria-label={`On the spine: step ${index + 1} of ${total}, ${arrived ? "arrived at" : `about ${remaining} minutes on foot to`} Birmingham Knowledge Quarter`}
+      aria-label={`On the spine: step ${index + 1} of ${total}, ${arrived ? "arrived at" : `about ${remaining} minute${remaining === 1 ? "" : "s"} on foot to`} Birmingham Knowledge Quarter`}
     >
       <div className="wayfinder__sign">
         <span className="wayfinder__arrow" aria-hidden="true">
