@@ -1,0 +1,269 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.89354,
+          52.482913
+        ]
+      },
+      "properties": {
+        "id": "W1",
+        "type": "Ground marker",
+        "heading": "NE",
+        "walkTimeMin": 1.7,
+        "nextMarker": "Ryder Street gateway",
+        "nearbyStops": "Tesco Express; Newton Street; Dalton Street",
+        "onwardDestinations": "Aston University, Millennium Point",
+        "crossingCaution": "",
+        "role": "Guide Totem",
+        "sponsorshipEnabled": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.893998,
+          52.480479
+        ]
+      },
+      "properties": {
+        "id": "W2",
+        "type": "Ground marker",
+        "heading": "N",
+        "walkTimeMin": 6.2,
+        "nextMarker": "W1",
+        "nearbyStops": "Priory Square; Dale House; Lower Bull Street",
+        "onwardDestinations": "Aston University, Millennium Point",
+        "crossingCaution": "",
+        "role": "Guide Totem",
+        "sponsorshipEnabled": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.898311,
+          52.478639
+        ]
+      },
+      "properties": {
+        "id": "W3",
+        "type": "Ground marker",
+        "heading": "NE",
+        "walkTimeMin": 9.6,
+        "nextMarker": "W5",
+        "nearbyStops": "",
+        "onwardDestinations": "Aston University, Millennium Point",
+        "crossingCaution": "",
+        "role": "Light Marker",
+        "sponsorshipEnabled": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.891749,
+          52.486018
+        ]
+      },
+      "properties": {
+        "id": "W4",
+        "type": "Crossing support",
+        "heading": "S",
+        "walkTimeMin": 3.8,
+        "nextMarker": "W1",
+        "nearbyStops": "Gosta Green",
+        "onwardDestinations": "Aston University, Millennium Point",
+        "crossingCaution": "Major road crossing ahead - use the signalised crossing",
+        "role": "Dwell No Pavilion",
+        "sponsorshipEnabled": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.898258,
+          52.481111
+        ]
+      },
+      "properties": {
+        "id": "W5",
+        "type": "Directional totem",
+        "heading": "NE",
+        "walkTimeMin": 6.7,
+        "nextMarker": "W7",
+        "nearbyStops": "Colmore Row",
+        "onwardDestinations": "Aston University, Millennium Point",
+        "crossingCaution": "",
+        "role": "Guide Totem",
+        "sponsorshipEnabled": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.886046,
+          52.488707
+        ]
+      },
+      "properties": {
+        "id": "W6",
+        "type": "Ground marker",
+        "heading": "SW",
+        "walkTimeMin": 10.8,
+        "nextMarker": "W4",
+        "nearbyStops": "The Gosta Green; Fletchers",
+        "onwardDestinations": "Aston University, Millennium Point",
+        "crossingCaution": "",
+        "role": "Dwell No Pavilion",
+        "sponsorshipEnabled": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.897702,
+          52.483655
+        ]
+      },
+      "properties": {
+        "id": "W7",
+        "type": "Lighting marker",
+        "heading": "E",
+        "walkTimeMin": 5.8,
+        "nextMarker": "W1",
+        "nearbyStops": "Lloyd House; Steelhouse Lane; Great Western Arcade",
+        "onwardDestinations": "Aston University, Millennium Point",
+        "crossingCaution": "",
+        "role": "Light Marker",
+        "sponsorshipEnabled": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.884805,
+          52.486288
+        ]
+      },
+      "properties": {
+        "id": "W8",
+        "type": "Directional totem",
+        "heading": "E",
+        "walkTimeMin": 2.9,
+        "nextMarker": "Innovation Birmingham",
+        "nearbyStops": "Coleshill Street",
+        "onwardDestinations": "Innovation Birmingham",
+        "crossingCaution": "Major road crossing ahead - use the signalised crossing",
+        "role": "Dwell No Pavilion",
+        "sponsorshipEnabled": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.879665,
+          52.489219
+        ]
+      },
+      "properties": {
+        "id": "W9",
+        "type": "Crossing support",
+        "heading": "SW",
+        "walkTimeMin": 5.1,
+        "nextMarker": "Innovation Birmingham",
+        "nearbyStops": "",
+        "onwardDestinations": "Innovation Birmingham",
+        "crossingCaution": "Major road crossing ahead - use the signalised crossing",
+        "role": "Dwell No Pavilion",
+        "sponsorshipEnabled": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.890494,
+          52.488923
+        ]
+      },
+      "properties": {
+        "id": "W10",
+        "type": "Crossing support",
+        "heading": "SE",
+        "walkTimeMin": 8.2,
+        "nextMarker": "Aston University",
+        "nearbyStops": "Bagot Street",
+        "onwardDestinations": "Aston University",
+        "crossingCaution": "Major road crossing ahead - use the signalised crossing",
+        "role": "Dwell No Pavilion",
+        "sponsorshipEnabled": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.88618,
+          52.482665
+        ]
+      },
+      "properties": {
+        "id": "W11",
+        "type": "Ground marker",
+        "heading": "NE",
+        "walkTimeMin": 0.2,
+        "nextMarker": "Millennium Point",
+        "nearbyStops": "Eastside City Park",
+        "onwardDestinations": "BCU City Centre, Millennium Point",
+        "crossingCaution": "",
+        "role": "Dwell No Pavilion",
+        "sponsorshipEnabled": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.881239,
+          52.484492
+        ]
+      },
+      "properties": {
+        "id": "W12",
+        "type": "Crossing support",
+        "heading": "NW",
+        "walkTimeMin": 2.4,
+        "nextMarker": "STEAMhouse",
+        "nearbyStops": "Curzon Street",
+        "onwardDestinations": "STEAMhouse",
+        "crossingCaution": "Major road crossing ahead - use the signalised crossing",
+        "role": "Dwell No Pavilion",
+        "sponsorshipEnabled": true
+      }
+    }
+  ]
+}

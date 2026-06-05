@@ -1,0 +1,378 @@
+{
+  "schemaVersion": "0.1.0",
+  "project": {
+    "title": "The Innovation Spine",
+    "product": "SpineLens AI",
+    "tagline": "Reconnecting Birmingham Knowledge Quarter to the city core.",
+    "phase": "Phase 1 - Make It Visible",
+    "envelope": "£1,000,000"
+  },
+  "chapters": [
+    {
+      "id": "challenge",
+      "title": "Close, Yet Far",
+      "kicker": "The problem",
+      "body": "Birmingham Knowledge Quarter is minutes from the city core, but the route feels unclear, broken and easy to miss.",
+      "confidence": "modelled",
+      "stats": [
+        {
+          "label": "vehicles a day at the main barrier",
+          "value": 35141
+        },
+        {
+          "label": "injury collisions nearby, 2020-2024",
+          "value": 20
+        }
+      ],
+      "map": {
+        "layers": [
+          "routes",
+          "study_boundary"
+        ],
+        "focus": [
+          -1.8935,
+          52.4838,
+          13.6,
+          30,
+          16
+        ]
+      }
+    },
+    {
+      "id": "one-spine",
+      "title": "One Spine",
+      "kicker": "The proposal",
+      "body": "Phase 1 makes the route visible: wayfinders, an amber tactical corridor, a safer crossing moment and a civic gateway pavilion.",
+      "confidence": "modelled",
+      "stats": [
+        {
+          "label": "Phase 1 envelope",
+          "value": 1000000,
+          "format": "gbp"
+        }
+      ],
+      "map": {
+        "layers": [
+          "corridor",
+          "wayfinders"
+        ],
+        "focus": [
+          -1.8924,
+          52.484,
+          14.6,
+          45,
+          20
+        ]
+      }
+    },
+    {
+      "id": "legibility",
+      "title": "Why It Feels Far",
+      "kicker": "Route clarity",
+      "body": "The approaches are not equally easy to read. The web app shows the route choices and the points where confidence drops.",
+      "confidence": "modelled",
+      "stats": [
+        {
+          "label": "clearest approach",
+          "value": "Colmore Row"
+        },
+        {
+          "label": "hardest approach",
+          "value": "Snow Hill"
+        }
+      ],
+      "map": {
+        "layers": [
+          "routes",
+          "anchors"
+        ],
+        "focus": [
+          -1.895,
+          52.4828,
+          14.4,
+          35,
+          0
+        ]
+      }
+    },
+    {
+      "id": "corridor",
+      "title": "The Corridor",
+      "kicker": "A visible route",
+      "body": "The city-core approaches feed one shared trunk near the gateway, so Phase 1 can focus visual intensity where it matters most.",
+      "confidence": "modelled",
+      "stats": [
+        {
+          "label": "shared trunk",
+          "value": 0.28,
+          "format": "km"
+        },
+        {
+          "label": "nearest major road",
+          "value": 71.5,
+          "format": "m"
+        }
+      ],
+      "map": {
+        "layers": [
+          "corridor",
+          "routes"
+        ],
+        "focus": [
+          -1.8918,
+          52.484,
+          16.4,
+          55,
+          28
+        ]
+      }
+    },
+    {
+      "id": "barrier",
+      "title": "The Barrier",
+      "kicker": "Crossing case",
+      "body": "The Dartmouth/Jennens crossing is the concentrated severance point. A tactical Phase 1 improvement keeps momentum while the fuller highways upgrade is developed.",
+      "confidence": "verified",
+      "stats": [
+        {
+          "label": "vehicles a day",
+          "value": 35141
+        },
+        {
+          "label": "cycles a day",
+          "value": 43
+        },
+        {
+          "label": "serious or fatal collisions nearby",
+          "value": 5
+        }
+      ],
+      "map": {
+        "layers": [
+          "routes",
+          "corridor",
+          "wayfinders"
+        ],
+        "focus": [
+          -1.8844,
+          52.4864,
+          17.0,
+          60,
+          38
+        ]
+      }
+    },
+    {
+      "id": "wayfinding",
+      "title": "Find Your Way",
+      "kicker": "Clarity per pound",
+      "body": "12 tiered wayfinders make the route legible end to end - on the city-core approaches and onward across the Dartmouth crossing into the Knowledge Quarter cluster, without overbuilding every decision point.",
+      "confidence": "modelled",
+      "stats": [
+        {
+          "label": "wayfinders",
+          "value": 12
+        },
+        {
+          "label": "interactive totems",
+          "value": 8
+        },
+        {
+          "label": "light markers",
+          "value": 4
+        }
+      ],
+      "map": {
+        "layers": [
+          "wayfinders",
+          "anchors",
+          "routes"
+        ],
+        "focus": [
+          -1.889,
+          52.4845,
+          14.6,
+          45,
+          12
+        ]
+      }
+    },
+    {
+      "id": "gateway",
+      "title": "The Gateway",
+      "kicker": "First moment of arrival",
+      "body": "A reversible timber pavilion gives B-KQ a public welcome point while keeping site risk and long-term commitment manageable.",
+      "confidence": "modelled",
+      "stats": [
+        {
+          "label": "site suitability",
+          "value": 76,
+          "format": "percent"
+        },
+        {
+          "label": "form",
+          "value": "reversible timber pavilion"
+        }
+      ],
+      "map": {
+        "layers": [
+          "anchors",
+          "corridor"
+        ],
+        "focus": [
+          -1.892412,
+          52.484042,
+          17.3,
+          60,
+          30
+        ]
+      }
+    },
+    {
+      "id": "budget",
+      "title": "Within Budget",
+      "kicker": "The first million",
+      "body": "The central estimate fits the £1m envelope with headroom. Costs remain early estimates and must be confirmed before funding decisions.",
+      "confidence": "estimate",
+      "stats": [
+        {
+          "label": "central estimate, net",
+          "value": 692523,
+          "format": "gbp"
+        },
+        {
+          "label": "central headroom",
+          "value": 307477,
+          "format": "gbp"
+        }
+      ],
+      "map": {
+        "layers": [
+          "corridor",
+          "wayfinders"
+        ],
+        "focus": [
+          -1.893,
+          52.4838,
+          13.9,
+          30,
+          18
+        ]
+      }
+    },
+    {
+      "id": "ask",
+      "title": "The Ask",
+      "kicker": "What backing unlocks",
+      "body": "Back Phase 1 to turn a winning concept into a visible, testable public route from the city core to B-KQ.",
+      "confidence": "estimate",
+      "stats": [
+        {
+          "label": "package",
+          "value": "wayfinding, corridor, crossing, gateway"
+        }
+      ],
+      "map": {
+        "layers": [
+          "routes",
+          "corridor",
+          "wayfinders"
+        ],
+        "focus": [
+          -1.8922,
+          52.4845,
+          14.3,
+          40,
+          24
+        ]
+      }
+    }
+  ],
+  "metrics": {
+    "legibility": [
+      {
+        "route": "Colmore Row",
+        "score": 68,
+        "walkTimeMin": 8.7,
+        "directness": 86
+      },
+      {
+        "route": "New Street",
+        "score": 65,
+        "walkTimeMin": 12.7,
+        "directness": 80
+      },
+      {
+        "route": "Nechells / Dartmouth",
+        "score": 51,
+        "walkTimeMin": 13.4,
+        "directness": 81
+      },
+      {
+        "route": "Moor Street",
+        "score": 49,
+        "walkTimeMin": 9.1,
+        "directness": 75
+      },
+      {
+        "route": "Snow Hill",
+        "score": 45,
+        "walkTimeMin": 7.2,
+        "directness": 73
+      }
+    ],
+    "budget": {
+      "envelope": 1000000,
+      "centralNet": 692523,
+      "headroomCentral": 307477,
+      "highEstimateFits": false
+    },
+    "wayfinders": {
+      "count": 12,
+      "tiers": {
+        "tier2_totem": 8,
+        "tier3_marker": 4
+      },
+      "model": "tiered; city-core light + pavilion hub; Nechells wayfinders carry hub-lite; civic sponsorship"
+    },
+    "crossing": {
+      "vehiclesPerDay": 35141,
+      "cyclesPerDay": 43,
+      "nearbyCollisions": 20,
+      "seriousOrFatal": 5
+    }
+  },
+  "layers": [
+    {
+      "id": "anchors",
+      "file": "layers/anchors.geojson",
+      "kind": "geojson"
+    },
+    {
+      "id": "corridor",
+      "file": "layers/corridor.geojson",
+      "kind": "geojson"
+    },
+    {
+      "id": "routes",
+      "file": "layers/routes.geojson",
+      "kind": "geojson"
+    },
+    {
+      "id": "study_boundary",
+      "file": "layers/study_boundary.geojson",
+      "kind": "geojson"
+    },
+    {
+      "id": "wayfinders",
+      "file": "layers/wayfinders.geojson",
+      "kind": "geojson"
+    }
+  ],
+  "confidenceLabels": {
+    "verified": "Verified data",
+    "modelled": "Evidence-led model",
+    "estimate": "Early estimate"
+  },
+  "disclaimer": "Evidence-led concept for presentation and stakeholder discussion. Costs, consents and field conditions to be confirmed before funding decisions."
+}

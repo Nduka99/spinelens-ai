@@ -43,6 +43,7 @@ tmp*_kernels/
 # --- Documentation & notes: sensitive, keep local. Only the root README is published. ---
 *.md
 !/README.md
+!/web/README.md
 
 # --- Reference materials & media: keep local ---
 *.pdf
@@ -73,6 +74,27 @@ node_modules/
 dist/
 build/
 .vite/
+
+# --- Production web app source and sanitized public content ---
+# The root web/ workspace is the public presentation app. Keep internal research data ignored,
+# but allow the sanitized content contract and web source to be committed.
+!web/
+!web/**/
+!web/README.md
+!web/package.json
+!web/package-lock.json
+!web/tsconfig*.json
+!web/vite.config.ts
+!web/index.html
+!web/build_content.py
+!web/src/**
+!web/public/**
+!web/public/content/**
+!web/public/content/**/*.json
+!web/public/content/**/*.geojson
+!web/public/visuals/**
+!web/public/visuals/**/*.avif
+!web/public/visuals/**/*.webp
 
 # --- OS and editor files ---
 .DS_Store
@@ -117,3 +139,17 @@ phase1_spinelens_ai/outputs/reports/*.ipynb
 phase1_spinelens_ai/outputs/reports/concept_visuals/
 phase1_spinelens_ai/outputs/reports/correct_deck_extract/
 phase1_spinelens_ai/outputs/reports/pptx_slide7_media/
+
+# =============================================================================
+# Re-assert (MUST stay last): never publish dependencies or build artifacts,
+# even though web/ is re-included above. These are large, generated and local.
+# =============================================================================
+web/node_modules/
+web/dist/
+web/.vite/
+web/coverage/
+web/test-results/
+web/playwright-report/
+**/node_modules/
+**/dist/
+**/.vite/

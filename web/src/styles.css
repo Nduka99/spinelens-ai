@@ -1,0 +1,552 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================================
+   Innovation Spine — base + design tokens (mirrors src/theme/tokens.ts).
+   Step 3: scrollytelling layout — a pinned full-height map with scene cards
+   scrolling over it; each scene drives the camera.
+   ========================================================================== */
+:root {
+  color-scheme: dark;
+  --ink: #0f172a;
+  --panel: #111827;
+  --panel-soft: rgba(15, 23, 42, 0.82);
+  --paper: #f8fafc;
+  --muted: #94a3b8;
+  --line: rgba(248, 250, 252, 0.12);
+  --amber: #f59e0b;
+  --timber: #c8a165;
+  --civic: #10b981;
+  --sky: #38bdf8;
+  --topbar-h: 72px;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--ink);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--paper);
+  background: #0f172a;
+}
+
+button {
+  font: inherit;
+}
+
+/* --- App shell --- */
+.app {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: var(--topbar-h);
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel-soft);
+  backdrop-filter: blur(14px);
+}
+
+.topbar__phase {
+  margin: 0;
+  color: var(--amber);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.topbar__title {
+  margin: 2px 0 0;
+  font-size: clamp(1.05rem, 1.7vw, 1.45rem);
+  line-height: 1;
+}
+
+.topbar__nav {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.topbar__nav button {
+  min-height: 36px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 999px;
+  color: var(--paper);
+  background: transparent;
+  cursor: pointer;
+}
+
+.topbar__nav button.is-active {
+  background: var(--amber);
+  color: #111827;
+  font-weight: 600;
+}
+
+.topbar__end {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar__jump select {
+  appearance: none;
+  max-width: 200px;
+  padding: 9px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.6);
+  color: var(--paper);
+  cursor: pointer;
+}
+
+.topbar__cta {
+  padding: 9px 16px;
+  border: 1px solid var(--amber);
+  border-radius: 999px;
+  color: var(--amber);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.app__body {
+  position: relative;
+  flex: 1;
+}
+
+/* --- Map surface (fills its parent; the Walk pins it) --- */
+.map-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0b1220;
+}
+
+.map-stage .maplibregl-map {
+  font-family: inherit;
+}
+
+/* --- The Walk: scrollytelling (pinned map + overlaying scenes) --- */
+.walk {
+  position: relative;
+  display: block;
+}
+
+.walk__map {
+  position: sticky;
+  top: var(--topbar-h);
+  height: calc(100vh - var(--topbar-h));
+  z-index: 1;
+}
+
+.walk__scenes {
+  position: relative;
+  z-index: 2;
+  margin-top: calc((100vh - var(--topbar-h)) * -1);
+  padding-bottom: 14vh;
+  pointer-events: none;
+}
+
+.scene {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: calc(100vh - var(--topbar-h));
+  padding: 0 clamp(16px, 5vw, 72px);
+  pointer-events: none;
+}
+
+.scene__card {
+  width: min(440px, 92vw);
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(13, 19, 33, 0.82);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 28px 64px -42px rgba(0, 0, 0, 0.95);
+  pointer-events: auto;
+  transition:
+    border-color 240ms ease,
+    box-shadow 240ms ease,
+    transform 240ms ease;
+}
+
+.scene.is-active .scene__card {
+  border-color: rgba(245, 158, 11, 0.55);
+  box-shadow:
+    0 0 0 1px rgba(245, 158, 11, 0.25),
+    0 30px 70px -45px rgba(245, 158, 11, 0.55);
+}
+
+.scene__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.scene__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: var(--amber);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.scene__index {
+  display: inline-grid;
+  width: 28px;
+  height: 28px;
+  place-content: center;
+  border-radius: 8px;
+  background: rgba(245, 158, 11, 0.16);
+}
+
+.scene__title {
+  margin: 12px 0 8px;
+  font-size: clamp(1.5rem, 2.2vw, 2.2rem);
+  line-height: 1.05;
+}
+
+.scene__body {
+  margin: 0;
+  color: #dbe4ef;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.scene__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+/* --- Diegetic wayfinder (in-world progress sign pinned to the map) --- */
+.wayfinder {
+  position: absolute;
+  left: clamp(16px, 3vw, 28px);
+  bottom: clamp(20px, 4vh, 34px);
+  z-index: 3;
+  width: min(330px, 78vw);
+  padding: 14px 16px;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  border-radius: 14px;
+  background: linear-gradient(160deg, rgba(13, 19, 33, 0.92), rgba(13, 19, 33, 0.78));
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 0 0 1px rgba(245, 158, 11, 0.08),
+    0 24px 50px -34px rgba(0, 0, 0, 0.9);
+  pointer-events: none;
+}
+
+.wayfinder__sign {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wayfinder__arrow {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--amber);
+  animation: wayfinder-bob 2.4s ease-in-out infinite;
+}
+
+.wayfinder__dest {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.wayfinder__eyebrow {
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.wayfinder__place {
+  font-size: 0.92rem;
+  line-height: 1.15;
+}
+
+.wayfinder__eta {
+  flex: 0 0 auto;
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--amber);
+}
+
+.wayfinder__eta[data-arrived] {
+  color: var(--civic);
+}
+
+.wayfinder__track {
+  display: flex;
+  gap: 4px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wayfinder__track li {
+  height: 4px;
+  flex: 1;
+  border-radius: 999px;
+  background: rgba(248, 250, 252, 0.16);
+  transition: background-color 360ms ease;
+}
+
+.wayfinder__track li.is-done {
+  background: var(--amber);
+}
+
+.wayfinder__here {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+.wayfinder__dot {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--amber);
+  box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.55);
+  animation: wayfinder-ping 2s ease-out infinite;
+}
+
+@keyframes wayfinder-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes wayfinder-ping {
+  0% {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.5);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 8px rgba(245, 158, 11, 0);
+  }
+}
+
+/* --- Panel views (Explore / Evidence / Vision) --- */
+.app__view {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 40px 24px 96px;
+}
+
+.view-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.view-panel__title {
+  margin: 0;
+  font-size: clamp(1.6rem, 2.4vw, 2.4rem);
+}
+
+.view-panel__lead {
+  margin: 0;
+  max-width: 60ch;
+  color: #dbe4ef;
+  line-height: 1.6;
+}
+
+.view-panel__note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.view-panel__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.view-panel__chips li {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.6);
+  text-transform: capitalize;
+}
+
+.view-panel__metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+
+.view-panel__metrics div {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.view-panel__metrics dt {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.view-panel__metrics dd {
+  margin: 8px 0 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* --- Shared components --- */
+.confidence-chip {
+  flex: 0 0 auto;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.confidence-verified {
+  background: rgba(16, 185, 129, 0.2);
+  color: #bbf7d0;
+}
+
+.confidence-modelled {
+  background: rgba(56, 189, 248, 0.18);
+  color: #bae6fd;
+}
+
+.confidence-estimate {
+  background: rgba(245, 158, 11, 0.18);
+  color: #fde68a;
+}
+
+.stat-pill {
+  min-height: 92px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.stat-pill strong {
+  display: block;
+  font-size: clamp(1.3rem, 1.9vw, 1.9rem);
+  line-height: 1;
+}
+
+.stat-pill span {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+/* --- Footer + states --- */
+.app__footer {
+  padding: 18px 24px;
+  border-top: 1px solid var(--line);
+  background: var(--panel-soft);
+}
+
+.app__footer p {
+  margin: 0;
+  max-width: 90ch;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.app-state {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  gap: 10px;
+  padding: 24px;
+  text-align: center;
+  color: var(--paper);
+}
+
+.app-state--error {
+  color: #fecaca;
+}
+
+@media (max-width: 720px) {
+  .topbar {
+    flex-wrap: wrap;
+    min-height: auto;
+  }
+
+  .scene {
+    justify-content: center;
+  }
+
+  /* Avoid overlapping the centred card; mobile layout is refined in Step 9. */
+  .wayfinder {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scene__card {
+    transition: none;
+  }
+
+  .wayfinder__arrow,
+  .wayfinder__dot {
+    animation: none;
+  }
+
+  .wayfinder__track li {
+    transition: none;
+  }
+}
