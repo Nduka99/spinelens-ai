@@ -5,15 +5,16 @@ import { App } from "./App";
 import type { SpineContent } from "../types/content";
 import type { ReactNode } from "react";
 
-// MapLibre needs WebGL, which jsdom lacks — stub the map module for the shell test.
+// MapLibre needs WebGL, which jsdom lacks - stub the map module for the shell test.
 vi.mock("react-map-gl/maplibre", () => ({
   default: ({ children }: { children?: ReactNode }) => <div data-testid="map">{children}</div>,
   Source: ({ children }: { children?: ReactNode }) => <>{children}</>,
   Layer: () => null,
   NavigationControl: () => null,
+  Popup: ({ children }: { children?: ReactNode }) => <div>{children}</div>,
 }));
 
-// Scrollama relies on IntersectionObserver — stub it for jsdom.
+// Scrollama relies on IntersectionObserver - stub it for jsdom.
 vi.mock("scrollama", () => {
   const instance = {
     setup: () => instance,
@@ -69,6 +70,9 @@ function jsonResponse(body: unknown) {
 }
 
 beforeEach(() => {
+  // Mark the first-load intro as already seen so the shell tests see the app
+  // directly (a dedicated test below covers the intro itself).
+  localStorage.setItem("spinelens.introSeen", "1");
   globalThis.fetch = vi.fn(async (input: RequestInfo | URL) => {
     const url = String(input);
     if (url.endsWith("/content/spine.json")) return jsonResponse(contentFixture);
@@ -78,12 +82,14 @@ beforeEach(() => {
 
 afterEach(() => {
   vi.restoreAllMocks();
+  localStorage.clear();
 });
 
 describe("App shell", () => {
   it("loads the content and renders the journey", async () => {
     render(<App />);
-    expect(await screen.findByRole("heading", { name: "The Innovation Spine" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "The Innovation Spine · Phase 1" })).toBeTruthy();
+    expect(screen.getByText("SpineLens AI")).toBeTruthy();
     expect(await screen.findByRole("heading", { name: "Close, Yet Far" })).toBeTruthy();
     expect(screen.getByRole("region", { name: "Innovation Spine map" })).toBeTruthy();
     // Diegetic wayfinder renders with the destination and a journey-progress label.
@@ -91,11 +97,22 @@ describe("App shell", () => {
     expect(screen.getByText(/You are here/i)).toBeTruthy();
   });
 
-  it("switches views via the nav tabs", async () => {
+  it("shows the intro on first load and dismisses it on start", async () => {
+    localStorage.clear();
     render(<App />);
-    const evidenceTab = await screen.findByRole("tab", { name: "The Evidence" });
+    const dialog = await screen.findByRole("dialog");
+    expect(dialog).toBeTruthy();
+    fireEvent.click(screen.getByRole("button", { name: /start the walk/i }));
+    expect(screen.queryByRole("dialog")).toBeNull();
+    expect(localStorage.getItem("spinelens.introSeen")).toBe("1");
+  });
+
+  it("switches views via the nav", async () => {
+    render(<App />);
+    const evidenceTab = await screen.findByRole("button", { name: "The Evidence" });
     fireEvent.click(evidenceTab);
-    expect(evidenceTab.getAttribute("aria-selected")).toBe("true");
-    expect(screen.getByRole("heading", { name: "The Evidence" })).toBeTruthy();
+    expect(evidenceTab.getAttribute("aria-current")).toBe("page");
+    // Evidence is a lazy-loaded view, so wait for its chunk to resolve.
+    expect(await screen.findByRole("heading", { name: "The Evidence" })).toBeTruthy();
   });
 });

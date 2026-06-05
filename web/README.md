@@ -40,5 +40,42 @@ From `web/`, the current prep check is:
 npm run content:check
 ```
 
-The next implementation step can safely scaffold/install Vite dependencies with npm when we are
-ready to create the actual app.
+## Develop, verify, build
+
+From `web/`:
+
+```bash
+npm install        # one-time
+npm run dev        # local dev server (http://127.0.0.1:5173)
+npm run verify     # content check + lint + tests + production build
+npm run build      # production build into ./dist
+npm run preview    # serve the built ./dist locally
+```
+
+### Content / asset build scripts (Python)
+
+These regenerate the sanitised public data and assets the app reads. Re-run them only when the
+underlying inputs change; the generated files in `public/` are committed.
+
+```bash
+python build_content.py --check     # public spine.json + map layers (fails on internal-term bleed)
+python build_3d_buildings.py        # 3D building/crossing/totem GeoJSON (needs osmnx + geopandas)
+python build_wayfinder_panels.py    # wayfinder panel content
+python build_concepts.py            # optimise phase1concepts/*.png -> public/concepts/*.webp + og.jpg
+```
+
+Source artwork lives in `../phase1concepts/` (kept local); `build_concepts.py` writes the
+web-optimised WebP plus the social share card to `public/`.
+
+## Deploy (zero ongoing cost)
+
+The app is a static SPA: `npm run build` emits `./dist` with no runtime backend. Deploy that folder
+to any static host. `public/_redirects` (SPA fallback) and `public/_headers` (immutable asset
+caching) cover Cloudflare Pages and Netlify automatically.
+
+- **Cloudflare Pages / Netlify** — build command `npm run build`, output directory `dist`.
+- **Vercel** — framework preset "Vite", output `dist`. For the SPA fallback add a `vercel.json`
+  rewrite of `/(.*)` to `/index.html` (Vercel ignores `_redirects`).
+
+After deploying, set the absolute `og:image`/`twitter:image` URL in `index.html` (currently `/og.jpg`)
+to `https://<your-domain>/og.jpg` so LinkedIn and Twitter render the share card.

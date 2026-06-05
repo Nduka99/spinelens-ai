@@ -150,6 +150,8 @@ web/.vite/
 web/coverage/
 web/test-results/
 web/playwright-report/
+web/cache/
 **/node_modules/
 **/dist/
 **/.vite/
+**/cache/

@@ -1,24 +1,51 @@
-import { useCallback, useState } from "react";
+import { Suspense, lazy, useCallback, useEffect, useState } from "react";
 
 import { useSpineContent } from "../content/content";
+import { Intro } from "./Intro";
 import { Walk } from "../walk/Walk";
-import { Explore } from "../explore/Explore";
-import { Evidence } from "../evidence/Evidence";
-import { Vision } from "../vision/Vision";
 
-type ViewId = "walk" | "explore" | "evidence" | "vision";
+// Non-default views are code-split: their JS (and Recharts for Evidence) only
+// downloads when the tab is first opened, keeping first paint lighter.
+const Explore = lazy(() => import("../explore/Explore").then((m) => ({ default: m.Explore })));
+const Evidence = lazy(() => import("../evidence/Evidence").then((m) => ({ default: m.Evidence })));
+const Vision = lazy(() => import("../vision/Vision").then((m) => ({ default: m.Vision })));
+const Concepts = lazy(() => import("../concepts/Concepts").then((m) => ({ default: m.Concepts })));
+
+const INTRO_KEY = "spinelens.introSeen";
+
+type ViewId = "walk" | "explore" | "evidence" | "vision" | "concepts";
 
 const VIEWS: { id: ViewId; label: string }[] = [
   { id: "walk", label: "The Walk" },
   { id: "explore", label: "Explore" },
   { id: "evidence", label: "The Evidence" },
   { id: "vision", label: "The Vision" },
+  { id: "concepts", label: "Concepts" },
 ];
 
 export function App() {
   const { content, error, loading } = useSpineContent();
   const [view, setView] = useState<ViewId>("walk");
   const [activeId, setActiveId] = useState<string>("");
+  const [pendingScroll, setPendingScroll] = useState<string | null>(null);
+  const [introSeen, setIntroSeen] = useState<boolean>(() => {
+    try {
+      return localStorage.getItem(INTRO_KEY) === "1";
+    } catch {
+      return false;
+    }
+  });
+
+  const dismissIntro = useCallback(() => {
+    setIntroSeen(true);
+    try {
+      localStorage.setItem(INTRO_KEY, "1");
+    } catch {
+      /* storage unavailable - fine, the intro just shows again next time */
+    }
+    // Return focus to the main content so keyboard users aren't dropped on <body>.
+    requestAnimationFrame(() => document.getElementById("main")?.focus());
+  }, []);
 
   // Dropdown selection: set the active chapter and scroll its scene into view
   // (scroll then keeps it active via Scrollama).
@@ -30,6 +57,22 @@ export function App() {
       target.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
     }
   }, []);
+
+  // "The Ask" works from any view: switch to the Walk first, then scroll to it.
+  const goToAsk = useCallback(() => {
+    if (view === "walk") jumpToChapter("ask");
+    else {
+      setView("walk");
+      setPendingScroll("ask");
+    }
+  }, [view, jumpToChapter]);
+
+  useEffect(() => {
+    if (pendingScroll && view === "walk") {
+      jumpToChapter(pendingScroll);
+      setPendingScroll(null);
+    }
+  }, [pendingScroll, view, jumpToChapter]);
 
   if (loading) {
     return (
@@ -52,21 +95,28 @@ export function App() {
     ? activeId
     : content.chapters[0].id;
 
+  // "Phase 1 - Make It Visible" -> "Phase 1" for the compact subject line.
+  const phaseShort = content.project.phase.split(/\s*[-–·]\s*/)[0].trim();
+
   return (
     <div className="app">
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
       <header className="topbar">
         <div className="topbar__brand">
-          <p className="topbar__phase">{content.project.phase}</p>
-          <h1 className="topbar__title">{content.project.title}</h1>
+          <span className="topbar__product">{content.project.product}</span>
+          <h1 className="topbar__title">
+            {content.project.title} · {phaseShort}
+          </h1>
         </div>
 
-        <nav className="topbar__nav" role="tablist" aria-label="Views">
+        <nav className="topbar__nav" aria-label="Views">
           {VIEWS.map((item) => (
             <button
               key={item.id}
               type="button"
-              role="tab"
-              aria-selected={view === item.id}
+              aria-current={view === item.id ? "page" : undefined}
               className={view === item.id ? "is-active" : ""}
               onClick={() => setView(item.id)}
             >
@@ -88,13 +138,13 @@ export function App() {
               </select>
             </label>
           )}
-          <a className="topbar__cta" href="#scene-ask">
+          <button type="button" className="topbar__cta" onClick={goToAsk}>
             The Ask
-          </a>
+          </button>
         </div>
       </header>
 
-      <div className="app__body">
+      <main id="main" className="app__body" tabIndex={-1}>
         {view === "walk" && (
           <Walk
             chapters={content.chapters}
@@ -105,26 +155,27 @@ export function App() {
             onActivate={setActiveId}
           />
         )}
-        {view === "explore" && (
-          <main className="app__view">
-            <Explore layers={content.layers} tagline={content.project.tagline} />
-          </main>
-        )}
-        {view === "evidence" && (
-          <main className="app__view">
-            <Evidence metrics={content.metrics} />
-          </main>
-        )}
-        {view === "vision" && (
-          <main className="app__view">
-            <Vision />
-          </main>
-        )}
-      </div>
+        <Suspense fallback={<div className="view-loading" role="status">Loading…</div>}>
+          {view === "explore" && <Explore layers={content.layers} tagline={content.project.tagline} />}
+          {view === "evidence" && <Evidence metrics={content.metrics} />}
+          {view === "vision" && <Vision layers={content.layers} />}
+          {view === "concepts" && <Concepts />}
+        </Suspense>
+      </main>
 
       <footer className="app__footer">
         <p>{content.disclaimer}</p>
       </footer>
+
+      {!introSeen && (
+        <Intro
+          product={content.project.product}
+          title={content.project.title}
+          phase={content.project.phase}
+          tagline={content.project.tagline}
+          onStart={dismissIntro}
+        />
+      )}
     </div>
   );
 }
