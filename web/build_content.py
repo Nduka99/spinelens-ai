@@ -8,12 +8,14 @@ current Phase 1 evidence pack into a small public contract for the Vite/React ap
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 INTERNAL_EXPORTS = ROOT / "phase1_spinelens_ai" / "outputs" / "exports"
+INTERNAL_TABLES = ROOT / "phase1_spinelens_ai" / "outputs" / "tables"
 PUBLIC_CONTENT = ROOT / "web" / "public" / "content"
 
 
@@ -47,16 +49,17 @@ INTERVENTION_LABELS = {
 DEFAULT_FOCUS = [-1.8924, 52.4845, 14.0, 35, 18]
 # Narrative zoom rhythm: open wide for context, push in TIGHT on the three
 # intervention points (corridor, barrier, gateway), then pull back for the close.
-# Tuned by feel — easy to adjust. [lng, lat, zoom, pitch, bearing]
+# Tuned by feel - easy to adjust. [lng, lat, zoom, pitch, bearing]
 CHAPTER_FOCUS = {
-    "challenge": [-1.8935, 52.4838, 13.6, 30, 16],  # wide — show the gap
-    "one-spine": [-1.8924, 52.4840, 14.6, 45, 20],  # slight push — whole route
-    "legibility": [-1.8950, 52.4828, 14.4, 35, 0],  # moderate — needs breadth
-    "corridor": [-1.8918, 52.4840, 16.4, 55, 28],  # tight — the shared trunk
-    "barrier": [-1.8844, 52.4864, 17.0, 60, 38],  # tightest — the junction
-    "wayfinding": [-1.889, 52.4845, 14.6, 45, 12],  # widen — city-core + onward cluster network
-    "gateway": [-1.892412, 52.484042, 17.3, 60, 30],  # tight — the pavilion site
-    "budget": [-1.8930, 52.4838, 13.9, 30, 18],  # pull back — recap
+    "challenge": [-1.8935, 52.4838, 13.6, 30, 16],  # wide - show the gap
+    "one-spine": [-1.8924, 52.4840, 14.6, 45, 20],  # slight push - whole route
+    "legibility": [-1.8950, 52.4828, 14.4, 35, 0],  # moderate - needs breadth
+    "corridor": [-1.8918, 52.4840, 16.0, 55, 28],  # tight - the shared trunk (eased back a touch)
+    "barrier": [-1.883, 52.48622, 16.8, 60, 44],  # tightest - the real Dartmouth/Jennens junction
+    "wayfinding": [-1.889, 52.4839, 14.7, 40, 8],  # centred on the wayfinder cluster; fits all 12 with margin
+    "gateway": [-1.89227, 52.48422, 18.4, 58, 30],  # very close on the pavilion
+    "budget": [-1.8930, 52.4838, 13.9, 30, 18],  # pull back - recap
+    "case": [-1.8905, 52.4838, 13.8, 34, 14],  # wide confident overview - the whole spine
     "ask": [-1.8922, 52.4845, 14.3, 40, 24],  # confident wide finish
 }
 
@@ -111,8 +114,8 @@ def build_chapters(evidence: dict[str, Any]) -> list[dict[str, Any]]:
             "title": "Close, Yet Far",
             "kicker": "The problem",
             "body": (
-                "Birmingham Knowledge Quarter is minutes from the city core, but the route feels "
-                "unclear, broken and easy to miss."
+                "The Knowledge Quarter is only minutes from the city centre, but the way there is "
+                "unclear, broken up and easy to miss."
             ),
             "confidence": "modelled",
             "stats": [
@@ -123,42 +126,42 @@ def build_chapters(evidence: dict[str, Any]) -> list[dict[str, Any]]:
         },
         {
             "id": "one-spine",
-            "title": "One Spine",
+            "title": "One Route",
             "kicker": "The proposal",
             "body": (
-                "Phase 1 makes the route visible: wayfinders, an amber tactical corridor, a safer "
-                "crossing moment and a civic gateway pavilion."
+                "Phase 1 makes the route easy to see and follow: clear wayfinders, a bright amber "
+                "route on the ground, a safer place to cross, and a welcoming pavilion at the entrance."
             ),
             "confidence": "modelled",
-            "stats": [{"label": "Phase 1 envelope", "value": budget["envelope_gbp"], "format": "gbp"}],
+            "stats": [{"label": "Phase 1 budget", "value": budget["envelope_gbp"], "format": "gbp"}],
             "map": {"layers": ["corridor", "wayfinders"]},
         },
         {
             "id": "legibility",
             "title": "Why It Feels Far",
-            "kicker": "Route clarity",
+            "kicker": "Following the route",
             "body": (
-                "The approaches are not equally easy to read. The web app shows the route choices "
-                "and the points where confidence drops."
+                "Some approaches are far easier to follow than others. SpineLens AI shows each "
+                "route and the points where people are most likely to lose their way."
             ),
             "confidence": "modelled",
             "stats": [
-                {"label": "clearest approach", "value": route_public_name(stages["route_legibility"]["most_legible"])},
+                {"label": "easiest approach", "value": route_public_name(stages["route_legibility"]["most_legible"])},
                 {"label": "hardest approach", "value": route_public_name(stages["route_legibility"]["least_legible"])},
             ],
-            "map": {"layers": ["routes", "anchors"]},
+            "map": {"layers": ["routes"]},
         },
         {
             "id": "corridor",
-            "title": "The Corridor",
-            "kicker": "A visible route",
+            "title": "The Amber Route",
+            "kicker": "One clear route",
             "body": (
-                "The city-core approaches feed one shared trunk near the gateway, so Phase 1 can "
-                "focus visual intensity where it matters most."
+                "Near the entrance, the city-centre approaches join into one main route. That lets "
+                "Phase 1 focus on making this stretch unmistakable."
             ),
             "confidence": "modelled",
             "stats": [
-                {"label": "shared trunk", "value": corridor["trunk_km"], "format": "km"},
+                {"label": "shared stretch", "value": corridor["trunk_km"], "format": "km"},
                 {"label": "nearest major road", "value": corridor["nearest_major_road_m"], "format": "m"},
             ],
             "map": {"layers": ["corridor", "routes"]},
@@ -166,10 +169,11 @@ def build_chapters(evidence: dict[str, Any]) -> list[dict[str, Any]]:
         {
             "id": "barrier",
             "title": "The Barrier",
-            "kicker": "Crossing case",
+            "kicker": "The crossing",
             "body": (
-                "The Dartmouth/Jennens crossing is the concentrated severance point. A tactical "
-                "Phase 1 improvement keeps momentum while the fuller highways upgrade is developed."
+                "The Dartmouth/Jennens junction is the hardest place to cross, and a real barrier "
+                "between the two areas. A quick Phase 1 fix improves it now, while a bigger road "
+                "upgrade is worked out."
             ),
             "confidence": "verified",
             "stats": [
@@ -182,68 +186,115 @@ def build_chapters(evidence: dict[str, Any]) -> list[dict[str, Any]]:
         {
             "id": "wayfinding",
             "title": "Find Your Way",
-            "kicker": "Clarity per pound",
+            "kicker": "Value for money",
             "body": (
-                f"{wayfinders['count']} tiered wayfinders make the route legible end to end - on the "
-                "city-core approaches and onward across the Dartmouth crossing into the Knowledge "
-                "Quarter cluster, without overbuilding every decision point."
+                f"{wayfinders['count']} wayfinders guide you the whole way. They run across the "
+                "city-centre approaches and over the Dartmouth crossing into the Knowledge Quarter, "
+                "without cluttering every corner."
             ),
             "confidence": "modelled",
             "stats": [
                 {"label": "wayfinders", "value": wayfinders["count"]},
-                {"label": "interactive totems", "value": wayfinders["tiers"].get("tier2_totem", 0)},
-                {"label": "light markers", "value": wayfinders["tiers"].get("tier3_marker", 0)},
+                {"label": "large interactive signs", "value": wayfinders["tiers"].get("tier2_totem", 0)},
+                {"label": "small markers", "value": wayfinders["tiers"].get("tier3_marker", 0)},
             ],
-            "map": {"layers": ["wayfinders", "anchors", "routes"]},
+            "map": {"layers": ["wayfinders", "routes"]},
         },
         {
             "id": "gateway",
             "title": "The Gateway",
-            "kicker": "First moment of arrival",
+            "kicker": "Arriving at B-KQ",
             "body": (
-                "A reversible timber pavilion gives B-KQ a public welcome point while keeping site "
-                "risk and long-term commitment manageable."
+                "A timber pavilion gives the Knowledge Quarter a welcoming front door. It can be "
+                "removed later, so the risk and long-term commitment stay low."
             ),
             "confidence": "modelled",
             "stats": [
                 {"label": "site suitability", "value": pct(pavilion["score"]), "format": "percent"},
-                {"label": "form", "value": "reversible timber pavilion"},
+                {"label": "form", "value": "removable timber pavilion"},
             ],
-            "map": {"layers": ["anchors", "corridor"]},
+            "map": {"layers": ["corridor"]},
         },
         {
             "id": "budget",
             "title": "Within Budget",
             "kicker": "The first million",
             "body": (
-                "The central estimate fits the £1m envelope with headroom. Costs remain early "
-                "estimates and must be confirmed before funding decisions."
+                "The likely cost fits inside the £1m budget, with money to spare. These are early "
+                "estimates and would be confirmed before anything is funded."
             ),
             "confidence": "estimate",
             "stats": [
-                {"label": "central estimate, net", "value": budget["net_of_sponsorship"]["central"], "format": "gbp"},
-                {"label": "central headroom", "value": budget["envelope_check"]["headroom_central"], "format": "gbp"},
+                {"label": "likely cost", "value": budget["net_of_sponsorship"]["central"], "format": "gbp"},
+                {"label": "money to spare", "value": budget["envelope_check"]["headroom_central"], "format": "gbp"},
             ],
             "map": {"layers": ["corridor", "wayfinders"]},
         },
         {
-            "id": "ask",
-            "title": "The Ask",
-            "kicker": "What backing unlocks",
+            "id": "case",
+            "title": "Why Back It",
+            "kicker": "Why it's worth it",
             "body": (
-                "Back Phase 1 to turn a winning concept into a visible, testable public route from "
-                "the city core to B-KQ."
+                "Phase 1 links the city centre to the Knowledge Quarter's two universities and "
+                "innovation hub with a clearer, safer walk. It is built to be low-risk: a removable "
+                "pavilion and a step-by-step crossing fix, with the likely cost inside the £1m budget "
+                "and money to spare. Local sponsors help pay for the wayfinders."
             ),
             "confidence": "estimate",
-            "stats": [{"label": "package", "value": "wayfinding, corridor, crossing, gateway"}],
+            "stats": [
+                {"label": "connects", "value": "2 universities + innovation hub"},
+                {"label": "built to be", "value": "removable + step by step"},
+                {"label": "part-funded by", "value": "local sponsors"},
+            ],
+            "map": {"layers": ["routes", "corridor", "wayfinders"]},
+        },
+        {
+            "id": "ask",
+            "title": "The Ask",
+            "kicker": "What your backing unlocks",
+            "body": (
+                "Back Phase 1, with its wayfinders, amber route, safer crossing and removable "
+                "gateway, to turn a strong idea into a real, visible walk from the city centre to "
+                "the Knowledge Quarter that we can test, learn from and build on."
+            ),
+            "confidence": "estimate",
+            "stats": [
+                {"label": "Phase 1 ask", "value": budget["envelope_gbp"], "format": "gbp"},
+                {"label": "what you get", "value": "wayfinders, route, crossing, gateway"},
+            ],
             "map": {"layers": ["routes", "corridor", "wayfinders"]},
         },
     ]
 
 
+def load_legibility_before_after() -> list[dict[str, Any]]:
+    """Route legibility before vs after wayfinding (from notebook 07), as 0-100 scores.
+
+    Read from the internal tables and sanitised to public route names. Returns [] if the
+    table is absent so the bundle still builds.
+    """
+    path = INTERNAL_TABLES / "wayfinder_before_after_rli.csv"
+    if not path.exists():
+        return []
+    rows: list[dict[str, Any]] = []
+    with path.open(encoding="utf-8") as handle:
+        for row in csv.DictReader(handle):
+            rows.append(
+                {
+                    "route": route_public_name(f"{row['route_family']}_to_ryder_gateway"),
+                    "before": pct(float(row["RLI_before"])),
+                    "after": pct(float(row["RLI_after"])),
+                    "delta": pct(float(row["delta"])),
+                }
+            )
+    rows.sort(key=lambda r: r["after"], reverse=True)
+    return rows
+
+
 def build_metrics(evidence: dict[str, Any]) -> dict[str, Any]:
     routes = evidence["stages"]["route_legibility"]["routes"]
     return {
+        "legibilityBeforeAfter": load_legibility_before_after(),
         "legibility": [
             {
                 "route": route_public_name(row["route_family"]),
@@ -288,7 +339,7 @@ def clean_layer_properties(layer_name: str, props: dict[str, Any]) -> dict[str, 
 
     if layer_name == "corridor":
         return {
-            "role": "Tactical corridor surface",
+            "role": "Amber route",
             "sharedRoutes": int(props.get("multiplicity", 0) or 0),
             "lengthM": round(float(props.get("length_m", 0) or 0), 1),
             "intensity": round(float(props.get("intensity", 0) or 0), 3),
@@ -298,7 +349,7 @@ def clean_layer_properties(layer_name: str, props: dict[str, Any]) -> dict[str, 
     if layer_name == "study_boundary":
         return {
             "name": "Phase 1 study area",
-            "status": "Working boundary for the evidence story",
+            "status": "The area we looked at",
         }
 
     if layer_name == "wayfinders":
@@ -364,7 +415,7 @@ def build_public_bundle() -> dict[str, Any]:
         "project": {
             "title": "The Innovation Spine",
             "product": "SpineLens AI",
-            "tagline": "Reconnecting Birmingham Knowledge Quarter to the city core.",
+            "tagline": "A clear, safe walk from Birmingham city centre to the Knowledge Quarter.",
             "phase": "Phase 1 - Make It Visible",
             "envelope": "£1,000,000",
         },
@@ -372,13 +423,13 @@ def build_public_bundle() -> dict[str, Any]:
         "metrics": build_metrics(evidence),
         "layers": public_layers,
         "confidenceLabels": {
-            "verified": "Verified data",
-            "modelled": "Evidence-led model",
+            "verified": "Measured data",
+            "modelled": "Our analysis",
             "estimate": "Early estimate",
         },
         "disclaimer": (
-            "Evidence-led concept for presentation and stakeholder discussion. Costs, consents "
-            "and field conditions to be confirmed before funding decisions."
+            "A concept to show what's possible and start the conversation. The figures are early "
+            "estimates, and costs and details would be checked before anything is built."
         ),
     }
 

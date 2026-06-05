@@ -1,0 +1,7 @@
+# Hashed build assets never change, so cache them hard.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Fonts are content-hashed too.
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable

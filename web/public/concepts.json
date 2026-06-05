@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "0.1",
+  "notes": "Concept artist's impressions of the Phase 1 improvements. Indicative only.",
+  "concepts": [
+    {
+      "id": "amber-route",
+      "title": "The amber route",
+      "caption": "A bright amber path on the ground leads you out of the city centre. Clear wayfinders show the way and the walking time to the Knowledge Quarter.",
+      "alt": "Concept artwork: the amber route. A bright amber path on the ground leads you out of the city centre. Clear wayfinders show the way and the walking time to the Knowledge Quarter.",
+      "src": "concepts/amber-route.webp",
+      "thumb": "concepts/amber-route-thumb.webp",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "id": "safer-crossing",
+      "title": "The safer crossing",
+      "caption": "A new signal-controlled crossing at the Dartmouth and Jennens junction, with an island in the middle, so people on foot and on bikes can cross the main road safely.",
+      "alt": "Concept artwork: the safer crossing. A new signal-controlled crossing at the Dartmouth and Jennens junction, with an island in the middle, so people on foot and on bikes can cross the main road safely.",
+      "src": "concepts/safer-crossing.webp",
+      "thumb": "concepts/safer-crossing-thumb.webp",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "id": "gateway-pavilion",
+      "title": "The gateway pavilion",
+      "caption": "A welcoming timber pavilion marks the front door to the Knowledge Quarter, with seating, planting and a wayfinder hub. It can be taken away again later.",
+      "alt": "Concept artwork: the gateway pavilion. A welcoming timber pavilion marks the front door to the Knowledge Quarter, with seating, planting and a wayfinder hub. It can be taken away again later.",
+      "src": "concepts/gateway-pavilion.webp",
+      "thumb": "concepts/gateway-pavilion-thumb.webp",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "id": "pavilion-aerial",
+      "title": "The pavilion from above",
+      "caption": "Seen from above, the pavilion sits on a public square where the amber route arrives, giving the Knowledge Quarter a clear, green welcome.",
+      "alt": "Concept artwork: the pavilion from above. Seen from above, the pavilion sits on a public square where the amber route arrives, giving the Knowledge Quarter a clear, green welcome.",
+      "src": "concepts/pavilion-aerial.webp",
+      "thumb": "concepts/pavilion-aerial-thumb.webp",
+      "width": 1672,
+      "height": 941
+    }
+  ]
+}

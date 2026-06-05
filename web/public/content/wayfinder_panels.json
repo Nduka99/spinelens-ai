@@ -1,0 +1,480 @@
+{
+  "schemaVersion": "0.1",
+  "notes": "Conceptual wayfinder panel content. Opportunities are general/evergreen examples; live fields (events, bus departures) are populated at deployment.",
+  "sponsorship": {
+    "model": "civic_partner",
+    "maxScreenShare": 0.15,
+    "guardrails": [
+      "bounded",
+      "no_tracking",
+      "never_blocks_wayfinding"
+    ]
+  },
+  "panels": {
+    "W1": {
+      "id": "W1",
+      "side": "city-core",
+      "variant": "light",
+      "type": "Ground marker",
+      "destination": "Birmingham Knowledge Quarter",
+      "heading": "NE",
+      "walkTimeMin": 1.7,
+      "nextMarker": "Ryder Street gateway",
+      "nearbyStops": "Tesco Express; Newton Street; Dalton Street",
+      "crossingCaution": "",
+      "findByNeed": [],
+      "opportunities": [],
+      "pavilionGuide": true,
+      "static": [
+        "heading",
+        "walkTimeMin",
+        "nextMarker",
+        "findByNeed",
+        "opportunities",
+        "nearbyStops"
+      ],
+      "dynamic": [
+        "liveEvents",
+        "busDepartures",
+        "accessibilityStatus"
+      ]
+    },
+    "W2": {
+      "id": "W2",
+      "side": "city-core",
+      "variant": "light",
+      "type": "Ground marker",
+      "destination": "Birmingham Knowledge Quarter",
+      "heading": "N",
+      "walkTimeMin": 6.2,
+      "nextMarker": "W1",
+      "nearbyStops": "Priory Square; Dale House; Lower Bull Street",
+      "crossingCaution": "",
+      "findByNeed": [],
+      "opportunities": [],
+      "pavilionGuide": true,
+      "static": [
+        "heading",
+        "walkTimeMin",
+        "nextMarker",
+        "findByNeed",
+        "opportunities",
+        "nearbyStops"
+      ],
+      "dynamic": [
+        "liveEvents",
+        "busDepartures",
+        "accessibilityStatus"
+      ]
+    },
+    "W3": {
+      "id": "W3",
+      "side": "city-core",
+      "variant": "light",
+      "type": "Ground marker",
+      "destination": "Birmingham Knowledge Quarter",
+      "heading": "NE",
+      "walkTimeMin": 9.6,
+      "nextMarker": "W5",
+      "nearbyStops": "",
+      "crossingCaution": "",
+      "findByNeed": [],
+      "opportunities": [],
+      "pavilionGuide": true,
+      "static": [
+        "heading",
+        "walkTimeMin",
+        "nextMarker",
+        "findByNeed",
+        "opportunities",
+        "nearbyStops"
+      ],
+      "dynamic": [
+        "liveEvents",
+        "busDepartures",
+        "accessibilityStatus"
+      ]
+    },
+    "W4": {
+      "id": "W4",
+      "side": "nechells",
+      "variant": "rich",
+      "type": "Crossing support",
+      "destination": "Birmingham Knowledge Quarter",
+      "heading": "S",
+      "walkTimeMin": 3.8,
+      "nextMarker": "W1",
+      "nearbyStops": "Gosta Green",
+      "crossingCaution": "Major road crossing ahead - use the signalised crossing",
+      "findByNeed": [
+        "Study",
+        "Work",
+        "Eat",
+        "Health",
+        "Innovation"
+      ],
+      "opportunities": [
+        {
+          "place": "Aston University",
+          "items": [
+            "Health-tech accelerator (SPARK)",
+            "Open days & short courses",
+            "Enterprise hub for start-ups"
+          ]
+        },
+        {
+          "place": "Millennium Point",
+          "items": [
+            "Thinktank science museum",
+            "Public exhibitions & events",
+            "STEM learning spaces"
+          ]
+        }
+      ],
+      "pavilionGuide": false,
+      "static": [
+        "heading",
+        "walkTimeMin",
+        "nextMarker",
+        "findByNeed",
+        "opportunities",
+        "nearbyStops"
+      ],
+      "dynamic": [
+        "liveEvents",
+        "busDepartures",
+        "accessibilityStatus"
+      ]
+    },
+    "W5": {
+      "id": "W5",
+      "side": "city-core",
+      "variant": "light",
+      "type": "Directional totem",
+      "destination": "Birmingham Knowledge Quarter",
+      "heading": "NE",
+      "walkTimeMin": 6.7,
+      "nextMarker": "W7",
+      "nearbyStops": "Colmore Row",
+      "crossingCaution": "",
+      "findByNeed": [],
+      "opportunities": [],
+      "pavilionGuide": true,
+      "static": [
+        "heading",
+        "walkTimeMin",
+        "nextMarker",
+        "findByNeed",
+        "opportunities",
+        "nearbyStops"
+      ],
+      "dynamic": [
+        "liveEvents",
+        "busDepartures",
+        "accessibilityStatus"
+      ]
+    },
+    "W6": {
+      "id": "W6",
+      "side": "nechells",
+      "variant": "rich",
+      "type": "Ground marker",
+      "destination": "Birmingham Knowledge Quarter",
+      "heading": "SW",
+      "walkTimeMin": 10.8,
+      "nextMarker": "W4",
+      "nearbyStops": "The Gosta Green; Fletchers",
+      "crossingCaution": "",
+      "findByNeed": [
+        "Study",
+        "Work",
+        "Eat",
+        "Health",
+        "Innovation"
+      ],
+      "opportunities": [
+        {
+          "place": "Aston University",
+          "items": [
+            "Health-tech accelerator (SPARK)",
+            "Open days & short courses",
+            "Enterprise hub for start-ups"
+          ]
+        },
+        {
+          "place": "Millennium Point",
+          "items": [
+            "Thinktank science museum",
+            "Public exhibitions & events",
+            "STEM learning spaces"
+          ]
+        }
+      ],
+      "pavilionGuide": false,
+      "static": [
+        "heading",
+        "walkTimeMin",
+        "nextMarker",
+        "findByNeed",
+        "opportunities",
+        "nearbyStops"
+      ],
+      "dynamic": [
+        "liveEvents",
+        "busDepartures",
+        "accessibilityStatus"
+      ]
+    },
+    "W7": {
+      "id": "W7",
+      "side": "city-core",
+      "variant": "light",
+      "type": "Lighting marker",
+      "destination": "Birmingham Knowledge Quarter",
+      "heading": "E",
+      "walkTimeMin": 5.8,
+      "nextMarker": "W1",
+      "nearbyStops": "Lloyd House; Steelhouse Lane; Great Western Arcade",
+      "crossingCaution": "",
+      "findByNeed": [],
+      "opportunities": [],
+      "pavilionGuide": true,
+      "static": [
+        "heading",
+        "walkTimeMin",
+        "nextMarker",
+        "findByNeed",
+        "opportunities",
+        "nearbyStops"
+      ],
+      "dynamic": [
+        "liveEvents",
+        "busDepartures",
+        "accessibilityStatus"
+      ]
+    },
+    "W8": {
+      "id": "W8",
+      "side": "nechells",
+      "variant": "rich",
+      "type": "Directional totem",
+      "destination": "Birmingham Knowledge Quarter",
+      "heading": "E",
+      "walkTimeMin": 2.9,
+      "nextMarker": "Innovation Birmingham",
+      "nearbyStops": "Coleshill Street",
+      "crossingCaution": "Major road crossing ahead - use the signalised crossing",
+      "findByNeed": [
+        "Study",
+        "Work",
+        "Eat",
+        "Health",
+        "Innovation"
+      ],
+      "opportunities": [
+        {
+          "place": "Innovation Birmingham",
+          "items": [
+            "Digital scale-up programmes",
+            "Open-innovation challenges",
+            "Tech careers & talent"
+          ]
+        }
+      ],
+      "pavilionGuide": false,
+      "static": [
+        "heading",
+        "walkTimeMin",
+        "nextMarker",
+        "findByNeed",
+        "opportunities",
+        "nearbyStops"
+      ],
+      "dynamic": [
+        "liveEvents",
+        "busDepartures",
+        "accessibilityStatus"
+      ]
+    },
+    "W9": {
+      "id": "W9",
+      "side": "nechells",
+      "variant": "rich",
+      "type": "Crossing support",
+      "destination": "Birmingham Knowledge Quarter",
+      "heading": "SW",
+      "walkTimeMin": 5.1,
+      "nextMarker": "Innovation Birmingham",
+      "nearbyStops": "",
+      "crossingCaution": "Major road crossing ahead - use the signalised crossing",
+      "findByNeed": [
+        "Study",
+        "Work",
+        "Eat",
+        "Health",
+        "Innovation"
+      ],
+      "opportunities": [
+        {
+          "place": "Innovation Birmingham",
+          "items": [
+            "Digital scale-up programmes",
+            "Open-innovation challenges",
+            "Tech careers & talent"
+          ]
+        }
+      ],
+      "pavilionGuide": false,
+      "static": [
+        "heading",
+        "walkTimeMin",
+        "nextMarker",
+        "findByNeed",
+        "opportunities",
+        "nearbyStops"
+      ],
+      "dynamic": [
+        "liveEvents",
+        "busDepartures",
+        "accessibilityStatus"
+      ]
+    },
+    "W10": {
+      "id": "W10",
+      "side": "nechells",
+      "variant": "rich",
+      "type": "Crossing support",
+      "destination": "Birmingham Knowledge Quarter",
+      "heading": "SE",
+      "walkTimeMin": 8.2,
+      "nextMarker": "Aston University",
+      "nearbyStops": "Bagot Street",
+      "crossingCaution": "Major road crossing ahead - use the signalised crossing",
+      "findByNeed": [
+        "Study",
+        "Work",
+        "Eat",
+        "Health",
+        "Innovation"
+      ],
+      "opportunities": [
+        {
+          "place": "Aston University",
+          "items": [
+            "Health-tech accelerator (SPARK)",
+            "Open days & short courses",
+            "Enterprise hub for start-ups"
+          ]
+        }
+      ],
+      "pavilionGuide": false,
+      "static": [
+        "heading",
+        "walkTimeMin",
+        "nextMarker",
+        "findByNeed",
+        "opportunities",
+        "nearbyStops"
+      ],
+      "dynamic": [
+        "liveEvents",
+        "busDepartures",
+        "accessibilityStatus"
+      ]
+    },
+    "W11": {
+      "id": "W11",
+      "side": "nechells",
+      "variant": "rich",
+      "type": "Ground marker",
+      "destination": "Birmingham Knowledge Quarter",
+      "heading": "NE",
+      "walkTimeMin": 0.2,
+      "nextMarker": "Millennium Point",
+      "nearbyStops": "Eastside City Park",
+      "crossingCaution": "",
+      "findByNeed": [
+        "Study",
+        "Work",
+        "Eat",
+        "Health",
+        "Innovation"
+      ],
+      "opportunities": [
+        {
+          "place": "BCU City Centre",
+          "items": [
+            "Courses & open days",
+            "Studios, labs & exhibitions",
+            "Creative & tech facilities"
+          ]
+        },
+        {
+          "place": "Millennium Point",
+          "items": [
+            "Thinktank science museum",
+            "Public exhibitions & events",
+            "STEM learning spaces"
+          ]
+        }
+      ],
+      "pavilionGuide": false,
+      "static": [
+        "heading",
+        "walkTimeMin",
+        "nextMarker",
+        "findByNeed",
+        "opportunities",
+        "nearbyStops"
+      ],
+      "dynamic": [
+        "liveEvents",
+        "busDepartures",
+        "accessibilityStatus"
+      ]
+    },
+    "W12": {
+      "id": "W12",
+      "side": "nechells",
+      "variant": "rich",
+      "type": "Crossing support",
+      "destination": "Birmingham Knowledge Quarter",
+      "heading": "NW",
+      "walkTimeMin": 2.4,
+      "nextMarker": "STEAMhouse",
+      "nearbyStops": "Curzon Street",
+      "crossingCaution": "Major road crossing ahead - use the signalised crossing",
+      "findByNeed": [
+        "Study",
+        "Work",
+        "Eat",
+        "Health",
+        "Innovation"
+      ],
+      "opportunities": [
+        {
+          "place": "STEAMhouse",
+          "items": [
+            "Free business support & mentoring",
+            "Maker spaces, studios & equipment",
+            "Innovation workshops & networking"
+          ]
+        }
+      ],
+      "pavilionGuide": false,
+      "static": [
+        "heading",
+        "walkTimeMin",
+        "nextMarker",
+        "findByNeed",
+        "opportunities",
+        "nearbyStops"
+      ],
+      "dynamic": [
+        "liveEvents",
+        "busDepartures",
+        "accessibilityStatus"
+      ]
+    }
+  }
+}
