@@ -97,11 +97,33 @@ export function VisionMap({ layers }: { layers: LayerReference[] }) {
       .catch(() => {});
   }, []);
 
-  function fly(target: { center: [number, number]; zoom: number; pitch: number; bearing: number }) {
+  // When the wayfinder panel is visible (bottom-centre), reserve that space so the
+  // camera centres its target ABOVE the card instead of behind it. We size the
+  // reserve from the panel VARIANT (rich Nechells cards are taller than light
+  // city-core ones) rather than measuring the DOM, which would read the outgoing
+  // card mid-transition. Padding is sticky in MapLibre, so we always pass it.
+  function cameraPadding(wfId?: string) {
+    if (!showWf || typeof window === "undefined") return { top: 0, right: 0, bottom: 0, left: 0 };
+    // Wide screens: card is docked right, so reserve horizontal space and centre
+    // the wayfinder in the open left area (comfortable vertical framing).
+    if (window.innerWidth > 720) {
+      return { top: 0, left: 0, bottom: 0, right: 392 };
+    }
+    // Narrow screens: card sits across the bottom, so push the target upward.
+    const variant = panels[wfId ?? activeWf?.id ?? ""]?.variant;
+    const frac = variant === "rich" ? 0.62 : 0.46;
+    return { top: 0, right: 0, left: 0, bottom: Math.round(window.innerHeight * frac) };
+  }
+
+  function fly(
+    target: { center: [number, number]; zoom: number; pitch: number; bearing: number },
+    wfId?: string,
+  ) {
     const map = mapRef.current;
     if (!map) return;
-    if (reduce()) map.jumpTo(target);
-    else map.flyTo({ ...target, duration: motion.slow * 2.0, curve: 1.5, essential: true });
+    const opts = { ...target, padding: cameraPadding(wfId) };
+    if (reduce()) map.jumpTo(opts);
+    else map.flyTo({ ...opts, duration: motion.slow * 2.0, curve: 1.5, essential: true });
   }
 
   useEffect(() => {
@@ -113,7 +135,7 @@ export function VisionMap({ layers }: { layers: LayerReference[] }) {
     const i = wfIndex < 0 ? 0 : (wfIndex + delta + wfList.length) % wfList.length;
     setWfIndex(i);
     const w = wfList[i];
-    fly({ center: [w.lon, w.lat], zoom: 18.2, pitch: 58, bearing: 32 });
+    fly({ center: [w.lon, w.lat], zoom: 18.2, pitch: 58, bearing: 32 }, w.id);
   }
 
   function toggleWf() {
