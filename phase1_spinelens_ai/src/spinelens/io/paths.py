@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from pathlib import Path
 
-
 PHASE1_ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = PHASE1_ROOT / "data"
 OUTPUTS_DIR = PHASE1_ROOT / "outputs"

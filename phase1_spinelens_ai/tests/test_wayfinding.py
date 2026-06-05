@@ -38,7 +38,9 @@ def test_greedy_stops_when_no_gain() -> None:
 def test_spacing_constraint_blocks_close_sites() -> None:
     weights, covers = _setup()
     # forbid choosing Z once X is chosen
-    too_close = lambda a, b: {a, b} == {"X", "Z"}
+    def too_close(a: str, b: str) -> bool:
+        return {a, b} == {"X", "Z"}
+
     picks = wf.greedy_max_coverage(["X", "Y", "Z", "W"], covers, weights, k=2, too_close=too_close)
     assert picks[0]["node"] == "X"
     assert picks[1]["node"] == "Y"  # Z blocked, Y is next best

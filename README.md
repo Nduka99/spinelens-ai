@@ -136,14 +136,17 @@ phase1_spinelens_ai/
 python -m venv .bkqproj
 .\.bkqproj\Scripts\Activate.ps1
 python -m pip install -r requirements-lock-py311.txt   # verified Python 3.11.9 lock
+python -m pip install -e .                              # install local spinelens package
 python -m pytest                                       # 80 tests
 ```
 Notebooks run on the `bkqproj` kernel; execute with `jupyter nbconvert --to notebook --execute`.
 
 ## 8. Roadmap
 
-- **Next:** a visual web app (the `evidence_pack.json` + GeoJSON layers exported by notebook 13
-  are its data contract) — a shared map with story chapters from the city core to B-KQ.
+- **Next:** the production-grade, zero-runtime-cost presentation web app described in
+  `webapp_implementation_plan.md`. The app will be static Vite/React, fed by a sanitized public
+  bundle generated from `evidence_pack.json` + GeoJSON layers, and tested locally for UX,
+  accessibility and performance before deployment.
 - **Then:** field validation, QS costing and consents (briefed in the validation register), and
   Phases 2–3.
 

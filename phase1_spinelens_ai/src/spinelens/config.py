@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-
 PHASE1_TOTAL_BUDGET_GBP = 1_000_000
 
 PHASE1_BUDGET_LINES: dict[str, int] = {

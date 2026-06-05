@@ -6,7 +6,6 @@ import csv
 import json
 from pathlib import Path
 
-
 PHASE1_ROOT = Path(__file__).resolve().parents[1]
 DATA = PHASE1_ROOT / "data"
 
