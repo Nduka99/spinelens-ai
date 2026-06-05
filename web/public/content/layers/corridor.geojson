@@ -17,7 +17,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 25.0,
         "intensity": 0.123,
@@ -40,7 +40,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 5.6,
         "intensity": 0.125,
@@ -63,7 +63,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 8.7,
         "intensity": 0.126,
@@ -90,7 +90,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 5.5,
         "intensity": 0.127,
@@ -113,7 +113,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 22.2,
         "intensity": 0.132,
@@ -136,7 +136,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 14.7,
         "intensity": 0.138,
@@ -159,7 +159,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 7.4,
         "intensity": 0.141,
@@ -182,7 +182,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 39.8,
         "intensity": 0.15,
@@ -205,7 +205,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 13.9,
         "intensity": 0.161,
@@ -228,7 +228,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 14.1,
         "intensity": 0.167,
@@ -251,7 +251,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 65.5,
         "intensity": 0.183,
@@ -274,7 +274,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 4.6,
         "intensity": 0.197,
@@ -297,7 +297,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 48.3,
         "intensity": 0.208,
@@ -332,7 +332,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 48.0,
         "intensity": 0.231,
@@ -367,7 +367,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 82.7,
         "intensity": 0.262,
@@ -390,7 +390,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 5.7,
         "intensity": 0.281,
@@ -433,7 +433,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 2,
         "lengthM": 44.1,
         "intensity": 0.493,
@@ -472,7 +472,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 2,
         "lengthM": 25.8,
         "intensity": 0.506,
@@ -503,7 +503,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 2,
         "lengthM": 73.4,
         "intensity": 0.528,
@@ -530,7 +530,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 3,
         "lengthM": 29.1,
         "intensity": 0.751,
@@ -557,7 +557,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 3,
         "lengthM": 64.1,
         "intensity": 0.773,
@@ -584,7 +584,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 4,
         "lengthM": 45.5,
         "intensity": 1.0,
@@ -607,7 +607,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 3.9,
         "intensity": 0.146,
@@ -638,7 +638,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 22.4,
         "intensity": 0.15,
@@ -665,7 +665,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 8.7,
         "intensity": 0.154,
@@ -692,7 +692,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 13.9,
         "intensity": 0.158,
@@ -715,7 +715,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 6.2,
         "intensity": 0.161,
@@ -738,7 +738,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 23.1,
         "intensity": 0.164,
@@ -761,7 +761,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 6.5,
         "intensity": 0.167,
@@ -788,7 +788,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 22.5,
         "intensity": 0.174,
@@ -815,7 +815,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 9.3,
         "intensity": 0.179,
@@ -838,7 +838,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 10.4,
         "intensity": 0.178,
@@ -865,7 +865,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 37.0,
         "intensity": 0.188,
@@ -888,7 +888,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 3.1,
         "intensity": 0.197,
@@ -919,7 +919,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 26.4,
         "intensity": 0.202,
@@ -942,7 +942,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 14.4,
         "intensity": 0.208,
@@ -969,7 +969,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 24.4,
         "intensity": 0.211,
@@ -992,7 +992,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 13.4,
         "intensity": 0.217,
@@ -1019,7 +1019,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 50.5,
         "intensity": 0.232,
@@ -1058,7 +1058,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 115.9,
         "intensity": 0.268,
@@ -1101,7 +1101,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 66.1,
         "intensity": 0.307,
@@ -1128,7 +1128,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 63.4,
         "intensity": 0.33,
@@ -1151,7 +1151,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 26.9,
         "intensity": 0.342,
@@ -1178,7 +1178,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 18.2,
         "intensity": 0.345,
@@ -1209,7 +1209,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 22.5,
         "intensity": 0.019,
@@ -1232,7 +1232,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 8.6,
         "intensity": 0.011,
@@ -1255,7 +1255,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 13.5,
         "intensity": 0.006,
@@ -1282,7 +1282,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 26.5,
         "intensity": 0.0,
@@ -1305,7 +1305,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 11.4,
         "intensity": 0.0,
@@ -1328,7 +1328,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 24.9,
         "intensity": 0.009,
@@ -1351,7 +1351,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 10.2,
         "intensity": 0.017,
@@ -1374,7 +1374,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 14.9,
         "intensity": 0.022,
@@ -1397,7 +1397,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 6.1,
         "intensity": 0.027,
@@ -1424,7 +1424,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 49.5,
         "intensity": 0.04,
@@ -1447,7 +1447,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 36.6,
         "intensity": 0.054,
@@ -1482,7 +1482,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 25.2,
         "intensity": 0.062,
@@ -1509,7 +1509,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 41.5,
         "intensity": 0.076,
@@ -1532,7 +1532,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 9.4,
         "intensity": 0.088,
@@ -1559,7 +1559,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 9.6,
         "intensity": 0.091,
@@ -1590,7 +1590,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 79.2,
         "intensity": 0.112,
@@ -1613,7 +1613,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 22.6,
         "intensity": 0.136,
@@ -1636,7 +1636,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 43.0,
         "intensity": 0.152,
@@ -1659,7 +1659,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 7.3,
         "intensity": 0.164,
@@ -1690,7 +1690,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 67.3,
         "intensity": 0.18,
@@ -1717,7 +1717,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 60.1,
         "intensity": 0.211,
@@ -1744,7 +1744,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 11.6,
         "intensity": 0.229,
@@ -1779,7 +1779,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 20.3,
         "intensity": 0.236,
@@ -1814,7 +1814,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 77.9,
         "intensity": 0.259,
@@ -1837,7 +1837,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 7.3,
         "intensity": 0.28,
@@ -1864,7 +1864,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 26.8,
         "intensity": 0.282,
@@ -1895,7 +1895,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 35.0,
         "intensity": 0.216,
@@ -1918,7 +1918,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 6.5,
         "intensity": 0.224,
@@ -1941,7 +1941,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 15.8,
         "intensity": 0.229,
@@ -1968,7 +1968,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 52.2,
         "intensity": 0.239,
@@ -1991,7 +1991,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 21.8,
         "intensity": 0.248,
@@ -2022,7 +2022,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 53.7,
         "intensity": 0.262,
@@ -2045,7 +2045,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 9.2,
         "intensity": 0.276,
@@ -2072,7 +2072,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 78.5,
         "intensity": 0.289,
@@ -2095,7 +2095,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 15.1,
         "intensity": 0.3,
@@ -2118,7 +2118,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 32.3,
         "intensity": 0.312,
@@ -2141,7 +2141,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 9.4,
         "intensity": 0.322,
@@ -2164,7 +2164,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 27.7,
         "intensity": 0.331,
@@ -2187,7 +2187,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 23.0,
         "intensity": 0.342,
@@ -2210,7 +2210,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 39.4,
         "intensity": 0.355,
@@ -2233,7 +2233,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 22.0,
         "intensity": 0.366,
@@ -2260,7 +2260,7 @@
         ]
       },
       "properties": {
-        "role": "Tactical corridor surface",
+        "role": "Amber route",
         "sharedRoutes": 1,
         "lengthM": 84.9,
         "intensity": 0.385,
