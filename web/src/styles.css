@@ -863,6 +863,19 @@ button {
   box-shadow: 0 26px 60px -38px rgba(0, 0, 0, 0.95);
 }
 
+/* Wide screens: dock the card to the right so the camera can centre the active
+   wayfinder in the open space to its left (paired with cameraPadding in VisionMap). */
+@media (min-width: 721px) {
+  .wf-panel {
+    left: auto;
+    right: 16px;
+    bottom: 16px;
+    transform: none;
+    width: 360px;
+    max-height: calc(100vh - var(--topbar-h) - 32px);
+  }
+}
+
 .wf-panel__top {
   display: flex;
   align-items: center;
