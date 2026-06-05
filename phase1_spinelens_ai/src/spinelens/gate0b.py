@@ -13,7 +13,6 @@ from typing import Iterable
 
 import requests
 
-
 PRIORITY_1_SOURCE_IDS = {
     "osm_network",
     "os_open_roads",

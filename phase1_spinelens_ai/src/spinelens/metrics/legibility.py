@@ -11,8 +11,6 @@ from __future__ import annotations
 from dataclasses import dataclass
 from math import atan2, cos, degrees, radians, sin
 
-from spinelens.spatial.audit import haversine_m
-
 
 @dataclass(frozen=True)
 class LegibilityWeights:

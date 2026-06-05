@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bkq-spinelens"
+version = "0.1.0"
+description = "Phase 1 evidence engine for The Innovation Spine / SpineLens AI."
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+authors = [
+  { name = "The Innovation Spine team" }
+]
+
+[tool.setuptools.packages.find]
+where = ["phase1_spinelens_ai/src"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
