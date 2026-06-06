@@ -195,11 +195,13 @@ export function MapStage({ layers, focus, activeLayerIds }: MapStageProps) {
     const map = mapRef.current;
     if (!map) return;
     const [longitude, latitude, zoom, pitch, bearing] = focus;
-    // The scene card sits on the right; pad the camera so the focus frames into the
-    // visible left area instead of hiding behind the card. (Mobile card centres in
-    // Step 9, so only pad on wider viewports.)
+    // Pad the camera away from the scene card so the focus frames into the visible
+    // map area, not behind the card: right on wide screens (card docked right),
+    // bottom on mobile (card docked along the bottom).
     const wide = typeof window !== "undefined" && window.innerWidth >= 760;
-    const padding = { top: 0, bottom: 0, left: 0, right: wide ? Math.min(460, Math.round(window.innerWidth * 0.34)) : 0 };
+    const padding = wide
+      ? { top: 0, bottom: 0, left: 0, right: Math.min(460, Math.round(window.innerWidth * 0.34)) }
+      : { top: 0, left: 0, right: 0, bottom: Math.round((typeof window !== "undefined" ? window.innerHeight : 800) * 0.5) };
     const target = { center: [longitude, latitude] as [number, number], zoom, pitch, bearing, padding };
     if (prefersReducedMotion()) {
       map.jumpTo(target);
