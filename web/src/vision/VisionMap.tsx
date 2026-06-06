@@ -102,26 +102,24 @@ export function VisionMap({ layers }: { layers: LayerReference[] }) {
   // reserve from the panel VARIANT (rich Nechells cards are taller than light
   // city-core ones) rather than measuring the DOM, which would read the outgoing
   // card mid-transition. Padding is sticky in MapLibre, so we always pass it.
-  function cameraPadding(wfId?: string) {
+  function cameraPadding() {
     if (!showWf || typeof window === "undefined") return { top: 0, right: 0, bottom: 0, left: 0 };
     // Wide screens: card is docked right, so reserve horizontal space and centre
     // the wayfinder in the open left area (comfortable vertical framing).
     if (window.innerWidth > 720) {
       return { top: 0, left: 0, bottom: 0, right: 392 };
     }
-    // Narrow screens: card sits across the bottom, so push the target upward.
-    const variant = panels[wfId ?? activeWf?.id ?? ""]?.variant;
-    const frac = variant === "rich" ? 0.62 : 0.46;
-    return { top: 0, right: 0, left: 0, bottom: Math.round(window.innerHeight * frac) };
+    // Narrow screens: reserve the top controls panel and the bottom card so the
+    // wayfinder centres in the clear band between them.
+    const controls = document.querySelector(".vision-controls") as HTMLElement | null;
+    const topPad = controls ? Math.round(controls.getBoundingClientRect().bottom + 16) : 0;
+    return { top: topPad, right: 0, left: 0, bottom: Math.round(window.innerHeight * 0.44) };
   }
 
-  function fly(
-    target: { center: [number, number]; zoom: number; pitch: number; bearing: number },
-    wfId?: string,
-  ) {
+  function fly(target: { center: [number, number]; zoom: number; pitch: number; bearing: number }) {
     const map = mapRef.current;
     if (!map) return;
-    const opts = { ...target, padding: cameraPadding(wfId) };
+    const opts = { ...target, padding: cameraPadding() };
     if (reduce()) map.jumpTo(opts);
     else map.flyTo({ ...opts, duration: motion.slow * 2.0, curve: 1.5, essential: true });
   }
@@ -135,7 +133,7 @@ export function VisionMap({ layers }: { layers: LayerReference[] }) {
     const i = wfIndex < 0 ? 0 : (wfIndex + delta + wfList.length) % wfList.length;
     setWfIndex(i);
     const w = wfList[i];
-    fly({ center: [w.lon, w.lat], zoom: 18.2, pitch: 58, bearing: 32 }, w.id);
+    fly({ center: [w.lon, w.lat], zoom: 18.2, pitch: 58, bearing: 32 });
   }
 
   function toggleWf() {
