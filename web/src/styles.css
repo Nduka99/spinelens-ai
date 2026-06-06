@@ -637,13 +637,30 @@ button {
   box-shadow: 0 22px 48px -34px rgba(0, 0, 0, 0.9);
 }
 
-.explore-controls__title {
+.explore-controls__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
   padding: 0;
+  border: 0;
+  background: none;
   color: var(--amber);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.explore-controls__chevron {
+  font-size: 0.7rem;
+}
+
+.explore-controls__body {
+  display: grid;
+  gap: 8px;
 }
 
 .explore-controls__row {
@@ -1441,6 +1458,56 @@ button {
   .vision-controls__toggle {
     padding-top: 8px;
   }
+
+  /* --- Touch targets (Apple 44 / Material 48) --- */
+  .topbar__nav button {
+    min-height: 44px;
+  }
+
+  .vision-controls__group button,
+  .vision-controls__toggle button {
+    min-height: 36px;
+  }
+
+  .explore-controls__toggle {
+    min-height: 44px;
+  }
+
+  .explore-controls__row {
+    min-height: 44px;
+  }
+
+  .explore-controls__row input {
+    width: 20px;
+    height: 20px;
+  }
+
+  .explore-controls__reset {
+    min-height: 44px;
+  }
+
+  /* Enlarge MapLibre's zoom/compass buttons for touch. */
+  .maplibregl-ctrl-group button {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* --- Safe-area insets (notch / home indicator) --- */
+  .topbar {
+    padding-top: max(10px, env(safe-area-inset-top));
+  }
+
+  .scene {
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+  }
+
+  .wf-panel {
+    bottom: max(12px, env(safe-area-inset-bottom));
+  }
+
+  .app__footer {
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1641,8 +1708,8 @@ button {
   position: absolute;
   top: 16px;
   right: 18px;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border: 0;
   border-radius: 999px;
   background: rgba(248, 250, 252, 0.1);
@@ -1693,8 +1760,8 @@ button {
   }
 
   .lightbox__nav {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     font-size: 1.4rem;
   }
 

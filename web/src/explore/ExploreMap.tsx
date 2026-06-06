@@ -144,6 +144,8 @@ export function ExploreMap({ layers }: { layers: LayerReference[] }) {
   );
   const [popup, setPopup] = useState<PopupInfo | null>(null);
   const [cursor, setCursor] = useState<"grab" | "pointer">("grab");
+  // Layer panel: open on desktop, collapsed on small screens so it doesn't cover the map.
+  const [panelOpen, setPanelOpen] = useState<boolean>(() => typeof window === "undefined" || window.innerWidth > 720);
 
   const present = useMemo(() => new Set(layers.map((l) => l.id)), [layers]);
   const toggles = TOGGLES.filter((t) => !t.needs || present.has(t.needs));
@@ -257,28 +259,42 @@ export function ExploreMap({ layers }: { layers: LayerReference[] }) {
         )}
       </Map>
 
-      <fieldset className="explore-controls">
-        <legend className="explore-controls__title">Layers</legend>
-        {toggles.map((t) => (
-          <label key={t.key} className="explore-controls__row">
-            <input
-              type="checkbox"
-              checked={visible[t.key]}
-              onChange={(e) => {
-                const on = e.target.checked;
-                setVisible((v) => ({ ...v, [t.key]: on }));
-                if (!on) setPopup(null);
-              }}
-            />
-            <span className="explore-controls__swatch" style={{ background: t.swatch }} aria-hidden="true" />
-            {t.label}
-          </label>
-        ))}
-        <button type="button" className="explore-controls__reset" onClick={resetView}>
-          Reset view
+      <div className={`explore-controls ${panelOpen ? "is-open" : "is-collapsed"}`} role="group" aria-label="Map layers">
+        <button
+          type="button"
+          className="explore-controls__toggle"
+          aria-expanded={panelOpen}
+          onClick={() => setPanelOpen((o) => !o)}
+        >
+          <span>Layers</span>
+          <span className="explore-controls__chevron" aria-hidden="true">
+            {panelOpen ? "▾" : "▸"}
+          </span>
         </button>
-        <p className="explore-controls__hint">Drag to pan · right-drag to tilt · click a feature for details.</p>
-      </fieldset>
+        {panelOpen && (
+          <div className="explore-controls__body">
+            {toggles.map((t) => (
+              <label key={t.key} className="explore-controls__row">
+                <input
+                  type="checkbox"
+                  checked={visible[t.key]}
+                  onChange={(e) => {
+                    const on = e.target.checked;
+                    setVisible((v) => ({ ...v, [t.key]: on }));
+                    if (!on) setPopup(null);
+                  }}
+                />
+                <span className="explore-controls__swatch" style={{ background: t.swatch }} aria-hidden="true" />
+                {t.label}
+              </label>
+            ))}
+            <button type="button" className="explore-controls__reset" onClick={resetView}>
+              Reset view
+            </button>
+            <p className="explore-controls__hint">Drag to pan · right-drag to tilt · tap a feature for details.</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
