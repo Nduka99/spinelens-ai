@@ -2,6 +2,8 @@
 
 **Reconnecting Birmingham Knowledge Quarter to the city core, proven with open data and shipped as an interactive web experience.**
 
+**▶ Live app: https://spinelens-ai.pages.dev**
+
 SpineLens AI is the Phase 1 layer of *The Innovation Spine*, a submission to the **West Midlands @ UKREiiF 2026 Next-Gen Placemaking & Urban Design Challenge**. It takes the proposal's four £1M "Make It Visible" interventions and turns them from an idea into a **measurable, testable, explainable** case: modelled notebooks-first on free public data, then presented in a production, zero-cost web app.
 
 This repository is the full pipeline, end to end: **research → evidence → sanitised public bundle → web app → deploy.**
@@ -45,7 +47,7 @@ Public open data  (OSM · DfT STATS19/AADF · NaPTAN · OS · HM Land Registry)
 [3] PRESENTATION             web/                   (Vite + React + MapLibre, 5 views, a11y / perf / mobile)
       │   npm run build  ->  static dist/
       ▼
-Cloudflare Pages  (free tier, Git-connected, auto-deploy on push)
+Cloudflare Pages  (free tier, Git-connected, auto-deploy on push)  ->  https://spinelens-ai.pages.dev
 ```
 
 **Why split it this way:** the research is reproducible and auditable on its own; the sanitise step guarantees no internal jargon, source IDs or evidence-level language ever reaches the public app (a `--check` bleed-guard fails the build if it does); the app is a static SPA with no backend, so hosting is free and nothing can break at runtime.

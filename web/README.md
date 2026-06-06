@@ -4,6 +4,8 @@ The **presentation layer** of *The Innovation Spine, Phase 1*. A static, zero-ba
 
 It reads only the **sanitised public bundle** in `public/content/` (generated from the research layer in `../phase1_spinelens_ai/`), so no internal data, source IDs or evidence-level language ever ships to the browser. For the full research-to-deployment architecture, see the [root README](../README.md).
 
+**▶ Live app: https://spinelens-ai.pages.dev**
+
 ## Views
 - **The Walk** - scrollytelling along the route; the camera flies to each chapter.
 - **Explore** - interactive 3D map: toggle layers (buildings, wayfinders, crossing, amber route), click any feature for plain-language detail.
