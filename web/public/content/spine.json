@@ -173,12 +173,12 @@
           "value": 12
         },
         {
-          "label": "large interactive signs",
-          "value": 8
+          "label": "interactive totems",
+          "value": 6
         },
         {
-          "label": "small markers",
-          "value": 4
+          "label": "ground markers",
+          "value": 6
         }
       ],
       "map": {
@@ -399,8 +399,8 @@
     "wayfinders": {
       "count": 12,
       "tiers": {
-        "tier2_totem": 8,
-        "tier3_marker": 4
+        "tier2_totem": 6,
+        "tier3_marker": 6
       },
       "model": "tiered; city-core light + pavilion hub; Nechells wayfinders carry hub-lite; civic sponsorship"
     },
