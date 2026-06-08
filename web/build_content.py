@@ -195,8 +195,8 @@ def build_chapters(evidence: dict[str, Any]) -> list[dict[str, Any]]:
             "confidence": "modelled",
             "stats": [
                 {"label": "wayfinders", "value": wayfinders["count"]},
-                {"label": "large interactive signs", "value": wayfinders["tiers"].get("tier2_totem", 0)},
-                {"label": "small markers", "value": wayfinders["tiers"].get("tier3_marker", 0)},
+                {"label": "interactive totems", "value": wayfinders.get("form_totem", 0)},
+                {"label": "ground markers", "value": wayfinders.get("form_marker", 0)},
             ],
             "map": {"layers": ["wayfinders", "routes"]},
         },
@@ -310,7 +310,14 @@ def build_metrics(evidence: dict[str, Any]) -> dict[str, Any]:
             "headroomCentral": evidence["budget"]["envelope_check"]["headroom_central"],
             "highEstimateFits": evidence["budget"]["envelope_check"]["fits_high"],
         },
-        "wayfinders": evidence["stages"]["wayfinders"],
+        "wayfinders": {
+            "count": evidence["stages"]["wayfinders"]["count"],
+            "tiers": {
+                "tier2_totem": evidence["stages"]["wayfinders"].get("form_totem", 0),
+                "tier3_marker": evidence["stages"]["wayfinders"].get("form_marker", 0),
+            },
+            "model": evidence["stages"]["wayfinders"].get("model", ""),
+        },
         "crossing": {
             "vehiclesPerDay": evidence["stages"]["crossing"]["aadf_a4540"],
             "cyclesPerDay": evidence["stages"]["crossing"]["cycles_a4540"],
@@ -402,8 +409,27 @@ def copy_layers(evidence: dict[str, Any], output_dir: Path) -> list[dict[str, st
     return public_layers
 
 
+def wayfinder_form_counts() -> tuple[int, int]:
+    """Wayfinders by physical form (upright totem vs ground marker), using the same rule
+    as the 3D layer (build_3d_buildings.py): directional and crossing signs are upright
+    totems; ground and lighting markers sit at ground level. This keeps the public count
+    identical to what a viewer can count in the 3D Vision."""
+    layer = read_json(INTERNAL_EXPORTS / "layers" / "wayfinders.geojson")
+    features = layer.get("features", [])
+    totem = sum(
+        1
+        for f in features
+        if any(k in str((f.get("properties") or {}).get("intervention_type", "")).lower()
+               for k in ("totem", "crossing", "directional"))
+    )
+    return totem, len(features) - totem
+
+
 def build_public_bundle() -> dict[str, Any]:
     evidence = read_json(INTERNAL_EXPORTS / "evidence_pack.json")
+    totem_n, marker_n = wayfinder_form_counts()
+    evidence["stages"]["wayfinders"]["form_totem"] = totem_n
+    evidence["stages"]["wayfinders"]["form_marker"] = marker_n
     public_layers = copy_layers(evidence, PUBLIC_CONTENT)
 
     chapters = build_chapters(evidence)
