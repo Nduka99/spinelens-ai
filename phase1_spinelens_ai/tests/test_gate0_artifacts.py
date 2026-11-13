@@ -6,8 +6,14 @@ import csv
 import json
 from pathlib import Path
 
+import pytest
+
 PHASE1_ROOT = Path(__file__).resolve().parents[1]
 DATA = PHASE1_ROOT / "data"
+
+# The source data files are not published with this repository, so a fresh clone skips these
+# checks instead of failing them; they run wherever the data folder is present.
+pytestmark = pytest.mark.skipif(not DATA.exists(), reason="the source data folder is not present")
 
 
 def _read_csv(path: Path) -> list[dict[str, str]]:
